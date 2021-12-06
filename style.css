@@ -1,0 +1,53 @@
+/*
+Theme Name:     Betheme-child
+Description:    
+Author:         romanov
+Template:       betheme
+
+(optional values you can add: Theme URI, Author URI, Version, License, License URI, Tags, Text Domain)
+*/
+
+.pagination { clear:both; padding:0 0 10px 200px; position:relative; font-size:11px; line-height:13px; } .pagination span, .pagination a { display:block; float:left; margin: 2px 2px 2px 0; padding:6px 9px 5px 9px; text-decoration:none; width:auto; color:#fff; background: #555; } .pagination a:hover{ color:#fff; background: #3279BB; } .pagination .current{ padding:6px 9px 5px 9px; background: #3279BB; color:#fff; }
+
+
+@media (max-width: 768px) {
+/* sumo me css */
+a[title="SumoMe"] {
+    display: none!important;
+    opacity: 0 !important;
+}
+}
+
+
+/* pinterest image css */
+body span[data-pin-href] {
+    background-image: url(/wp-content/uploads/pin.png) !important;
+    background-color: transparent!important;
+    box-shadow: none;
+}
+
+body span[data-pin-href] {
+    cursor: pointer !important;
+    background-repeat: none !important;
+    background-size: auto !important;
+    height: 35px !important;
+    padding: 0 !important;
+    vertical-align: baseline !important;
+    text-decoration: none !important;
+    width: 35px !important;
+    background-position: right bottom !important;
+    text-indent: 35px !important;
+    overflow: hidden;
+}
+body span[data-pin-href]:hover {
+    box-shadow: none;
+}
+.page-template-template-antiques ]:hover {
+    display: none;
+}
+
+body.archive span[data-pin-href],
+.page-template-template-antiques span[data-pin-href]
+ {
+    display:none!important;
+}
