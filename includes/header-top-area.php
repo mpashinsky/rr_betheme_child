@@ -279,7 +279,7 @@
 				</div>
 				
 				<div class="banner_wrapper">
-					<?php mfn_opts_show( 'header-banner' ); ?>
+					<?php mfn_opts_get( 'header-banner' ); ?>
 				</div>
 				
 				<div class="search_wrapper">

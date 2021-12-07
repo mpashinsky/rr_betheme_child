@@ -149,7 +149,7 @@ style="border-width:0" /></a></noscript>
 
 <?php if( mfn_opts_get('popup-contact-form') ): ?>
 	<div id="popup_contact">
-		<a class="button button_js" href="#"><i class="<?php mfn_opts_show( 'popup-contact-form-icon', 'icon-mail-line' ); ?>"></i></a>
+		<a class="button button_js" href="#"><i class="<?php mfn_opts_get( 'popup-contact-form-icon', 'icon-mail-line' ); ?>"></i></a>
 		<div class="popup_contact_wrapper">
 			<?php echo do_shortcode( mfn_opts_get('popup-contact-form') ); ?>
 			<span class="arrow"></span>
