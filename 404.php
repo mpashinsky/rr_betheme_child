@@ -39,7 +39,7 @@ if( mfn_title() ){
 
 <?php do_action('wp_seo'); ?>
 
-<link rel="shortcut icon" href="<?php mfn_opts_show('favicon-img',THEME_URI .'/images/favicon.ico'); ?>" type="image/x-icon" />	
+<link rel="shortcut icon" href="<?php mfn_opts_get('favicon-img',THEME_URI .'/images/favicon.ico'); ?>" type="image/x-icon" />	
 
 <!-- wp_head() -->
 <?php wp_head();?>
@@ -78,7 +78,7 @@ if( mfn_title() ){
 			<div class="container">
 				<div class="column one">
 					<div class="error_pic">
-						<i class="<?php mfn_opts_show('error404-icon','icon-traffic-cone'); ?>"></i>
+						<i class="<?php mfn_opts_get('error404-icon','icon-traffic-cone'); ?>"></i>
 					</div>
 					<div class="error_desk">
 						<h2><?php echo $translate['404-title']; ?></h2>

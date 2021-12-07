@@ -35,9 +35,9 @@
 
 <?php do_action('wp_seo'); ?>
 
-<link rel="shortcut icon" href="<?php mfn_opts_show( 'favicon-img', THEME_URI .'/images/favicon.ico' ); ?>" />	
+<link rel="shortcut icon" href="<?php mfn_opts_get( 'favicon-img', THEME_URI .'/images/favicon.ico' ); ?>" />	
 <?php if( mfn_opts_get('apple-touch-icon') ): ?>
-<link rel="apple-touch-icon" href="<?php mfn_opts_show( 'apple-touch-icon' ); ?>" />
+<link rel="apple-touch-icon" href="<?php mfn_opts_get( 'apple-touch-icon' ); ?>" />
 <?php endif; ?>	
 
 <!-- wp_head() -->
