@@ -412,7 +412,7 @@ if ( ! function_exists( 'imedica_related_posts' ) ) :
 			//echo '<xmp>'; print_r($rel); echo '</xmp>';
 			$output = '';
 				//$output .= '<div class="rotate-cls">';
-                $output .= '<div class="lm_wrapper rotate-cls '. $portfolio_classes .'">';
+                $output .= '<div class="lm_wrapper rotate-cls isotope '. $portfolio_classes .'">';
                 foreach ( $rel as $r ) {
 					$item_class = array();
 					$categories = '';
@@ -688,4 +688,35 @@ function imedica_remove_query_strings( $src ) {
 }
 add_filter( 'style_loader_src', 'imedica_remove_query_strings', 10, 2 );
 add_filter( 'script_loader_src', 'imedica_remove_query_strings', 10, 2 );
+
+
+/* ---------------------------------------------------------------------------
+ * Sticky post navigation
+ * --------------------------------------------------------------------------- */
+if( ! function_exists( 'mfn_post_navigation' ) )
+{
+	function mfn_post_navigation( $post, $next_prev, $icon ){
+		$output = '';
+	
+		if( is_object( $post ) ){
+			// move this DOM element with JS
+			$output .= '<a class="fixed-nav fixed-nav-'. $next_prev .' format-'. get_post_format( $post ) .'" href="'. get_permalink( $post ) .'">';
+				
+				$output .= '<span class="arrow"><i class="'. $icon .'"></i></span>';
+				
+				$output .= '<div class="photo">';
+					$output .= get_the_post_thumbnail( $post->ID, 'blog-navi' );
+				$output .= '</div>';
+				
+				$output .= '<div class="desc">';
+					$output .= '<h6>'. get_the_title( $post ) .'</h6>';
+					$output .= '<span class="date"><i class="icon-clock"></i>'. get_the_date(get_option('date_format'), $post->ID) .'</span>';
+				$output .= '</div>';
+				
+			$output .= '</a>';
+		}
+	
+		return $output;
+	}
+}
 ?>
