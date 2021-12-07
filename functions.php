@@ -412,7 +412,7 @@ if ( ! function_exists( 'imedica_related_posts' ) ) :
 			//echo '<xmp>'; print_r($rel); echo '</xmp>';
 			$output = '';
 				//$output .= '<div class="rotate-cls">';
-                $output .= '<div class="lm_wrapper rotate-cls isotope '. $portfolio_classes .'">';
+                $output .= '<div class="lm_wrapper rotate-cls '. $portfolio_classes .'">';
                 foreach ( $rel as $r ) {
 					$item_class = array();
 					$categories = '';
