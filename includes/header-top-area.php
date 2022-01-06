@@ -244,7 +244,7 @@
 			
 				<div class="menu_wrapper">
 					<?php 
-						if( ( mfn_header_style( true ) != 'header-overlay' ) && ( mfn_opts_get( 'menu-style' ) != 'hide' ) ){
+						/*if( ( mfn_header_style( true ) != 'header-overlay' ) && ( mfn_opts_get( 'menu-style' ) != 'hide' ) ){
 	
 							// TODO: modify the mfn_header_style() function to be able to find the text 'header-split' in headers array
 							
@@ -269,7 +269,8 @@
 								}  
 							echo '</a>';
 							
-						}
+						}*/
+						<?php ubermenu( 'main' , array( 'menu' => 4 ) ); ?>
 					?>					
 				</div>			
 				
