@@ -270,7 +270,7 @@
 							echo '</a>';
 							
 						}*/
-						<?php ubermenu( 'main' , array( 'menu' => 4 ) ); ?>
+						ubermenu( 'main' , array( 'menu' => 4 ) );
 					?>					
 				</div>			
 				
