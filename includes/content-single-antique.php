@@ -214,7 +214,7 @@ $translate['task'] 			= mfn_opts_get('translate') ? mfn_opts_get('translate-task
 					<div class="entry-content portfolio-main-content" itemprop="mainContentOfPage">
 						<?php
 					// Content Builder & WordPress Editor Content
-						// TODO: uncoment mfn_builder_print( get_the_ID() );
+							mfn_builder_print( get_the_ID() );
 						?>
 					</div>
 
