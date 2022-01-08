@@ -51,3 +51,14 @@ body.archive span[data-pin-href],
  {
     display:none!important;
 }
+
+/* Contacts - header begin */
+.romanov_contact_details .details_email {
+    color: #ffffff;
+    font-size: 17px;
+}
+
+.romanov_contact_details .details_email .fas {
+    padding-right: 0.5em;
+}
+/* Contacts - header end */
