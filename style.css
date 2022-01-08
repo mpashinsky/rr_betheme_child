@@ -53,7 +53,7 @@ body.archive span[data-pin-href],
 }
 
 /* Contacts - header begin */
-.romanov_contact_details .details_email {
+.romanov_contact_details .details_email:before {
     color: #ffffff;
     font-size: 17px;
 }
