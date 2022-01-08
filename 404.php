@@ -27,8 +27,8 @@ get_header();
 <?php if( mfn_opts_get('responsive') ) echo '<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">'; ?>
 
 <title><?php
-if( mfn_title() ){
-	echo mfn_title();
+if( mfn_title($translate['404-title']) ){
+	echo mfn_title($translate['404-title']);
 } else {
 	global $page, $paged;
 	wp_title( '|', true, 'right' );
@@ -62,7 +62,9 @@ if( mfn_title() ){
 				<!-- .sections_group -->
 				<div class="sections_group">
 					<?php 
-						mfn_builder_print( $customID, true );	// Content Builder & WordPress Editor Content
+						// mfn_builder_print( $customID, true );	// Content Builder & WordPress Editor Content
+						$mfn_builder = new Mfn_Builder_Front($customID, true);
+						$mfn_builder->show();
 					?>
 				</div>
 				
