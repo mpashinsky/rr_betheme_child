@@ -153,7 +153,7 @@ $translate['task'] 			= mfn_opts_get('translate') ? mfn_opts_get('translate-task
 <div id="portfolio-item-<?php the_ID(); ?>" <?php post_class( $classes ); ?>>
 	<div class="section section-portfolio-header">
 		<div class="section_wrapper clearfix">
-			<?php if( mfn_opts_get('prev-next-nav') ): ?>
+			<?php if( false/*mfn_opts_get('prev-next-nav')*/ ): ?>
 				<div class="column one post-nav">
 					<?php 
 					// prev & next post navigation
@@ -215,7 +215,7 @@ $translate['task'] 			= mfn_opts_get('translate') ? mfn_opts_get('translate-task
 						<?php
 							// Content Builder & WordPress Editor Content
 							// mfn_builder_print( get_the_ID() );
-							$mfn_builder = new Mfn_Builder_Front($post->ID);
+							$mfn_builder = new Mfn_Builder_Front(get_the_ID());
 							$mfn_builder->show();
 						?>
 					</div>
