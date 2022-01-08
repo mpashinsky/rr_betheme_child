@@ -42,7 +42,7 @@ body span[data-pin-href] {
 body span[data-pin-href]:hover {
     box-shadow: none;
 }
-.page-template-template-antiques ]:hover {
+.page-template-template-antiques:hover {
     display: none;
 }
 
