@@ -324,24 +324,13 @@ $translate['task'] 			= mfn_opts_get('translate') ? mfn_opts_get('translate-task
 
 					</div>	
 					<br>
-					<div class="meta-value-parent reference-section">
-    					<div class="vc_btn3-container  home-read-more margin-remove vc_btn3-center">
-    	                    <a style="border: 1px solid #d49b50; color:#ffffff;" 
-    	                        class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom" 
-    	                        href="mailto:info@romanovrussia.com?subject=Question about item with reference <?php echo $reference ?>">
-    	                            Ask a question
-                            </a>
-                        </div>
-                    </div>
-					<div class="meta-value-parent reference-section">
-    					<div class="vc_btn3-container  home-read-more margin-remove vc_btn3-center">
-    	                    <a style="border: 1px solid #d49b50; color:#ffffff;" 
-    	                        class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom" 
-                                href="/terms" title="">
-    	                            Terms of sale
-                            </a>
-                        </div>
-                    </div>
+					<a href="mailto:info@romanovrussia.com?subject=Question about item with reference <?php echo $reference ?>">
+					    <input type="submit" class="gform_button button" value="Ask a question">
+				    </a>
+					<br>
+					<a href="/terms">
+					    <input type="submit" class="gform_button button" value="Terms of sale">
+				    </a>
 				</div>
 			</div>
 		</div>
