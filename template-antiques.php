@@ -66,7 +66,11 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
 		
 		
 			<div class="extra_content">
-				<?php // TODO: uncomment mfn_builder_print( mfn_ID(), true ); ?>
+				<?php 
+					// mfn_builder_print( mfn_ID(), true ); 
+					$mfn_builder = new Mfn_Builder_Front(mfn_ID(), true);
+					$mfn_builder->show();
+				?>
 			</div>
 			
 			
