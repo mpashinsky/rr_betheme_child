@@ -323,7 +323,6 @@ $translate['task'] 			= mfn_opts_get('translate') ? mfn_opts_get('translate-task
 						<?php } ?>
 
 					</div>	
-					<br>
 					<a href="mailto:info@romanovrussia.com?subject=Question about item with reference <?php echo $reference ?>">
 					    <input type="submit" class="gform_button button" value="Ask a question">
 				    </a>
