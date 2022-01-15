@@ -623,7 +623,7 @@ if ( ! function_exists( 'responsive_related_posts' ) ) :
         
 		if ( isset( $rel ) && !empty( $rel ) && $have_non_sold_posts ) {
 		?>
-        <div class="related-posts <?php echo $class_to_apply; ?>">
+        <div class="related-posts-<?php echo $class_to_apply; ?>">
             <h2 class="related-posts-title"><?php _e( "Related Items", "imedica" ); ?></h2>
             <?php
             //for use in the loop, list 4 post titles related to first tag on current post
