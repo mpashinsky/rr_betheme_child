@@ -402,9 +402,9 @@ $translate['task'] 			= mfn_opts_get('translate') ? mfn_opts_get('translate-task
 				// echo "</pre>";
 				//do_shortcode( '[ultimate_carousel slides_on_desk="4"][get_related_posts][/ultimate_carousel]' );
 				
-				responsive_related_posts( $post, "slick-desktop", ".slick-desktop-container", 4 );
-				responsive_related_posts( $post, "slick-tablet", ".slick-tablet-container", 2 );
-				responsive_related_posts( $post, "slick-mobile", ".slick-mobile-container", 1 );
+				responsive_related_posts( $post, "slick-desktop", "slick-desktop-container", 4 );
+				responsive_related_posts( $post, "slick-tablet", "slick-tablet-container", 2 );
+				responsive_related_posts( $post, "slick-mobile", "slick-mobile-container", 1 );
 
 				?>
 			</div>
