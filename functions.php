@@ -602,6 +602,225 @@ if ( ! function_exists( 'imedica_related_posts' ) ) :
     }
 endif; // Realted Posts
 
+if ( ! function_exists( 'responsive_related_posts' ) ) :
+    function responsive_related_posts( $post, $class_to_apply, $slides_to_show ) {
+		$rel = get_field( 'related_posts', $post->ID );
+    	$portfolio_classes  = 'grid col-4';
+
+        //Check that we have non-sold related posts 		    
+        $have_non_sold_posts = false;
+		if ( isset( $rel ) && !empty( $rel ) ) {
+            foreach ( $rel as $r ) {
+				$custom_fields = get_post_meta($r->ID);
+				if (array_key_exists('status', $custom_fields)) {
+					$antique_status = $custom_fields['status'][0];
+					if ( $antique_status !== 'Sold' ) {
+					    $have_non_sold_posts = true;
+					}
+				}   
+            }
+        }
+        
+		if ( isset( $rel ) && !empty( $rel ) && $have_non_sold_posts ) {
+		?>
+        <div class="related-posts">
+            <h2 class="related-posts-title"><?php _e( "Related Items", "imedica" ); ?></h2>
+            <?php
+            //for use in the loop, list 4 post titles related to first tag on current post
+			$rel = get_field( 'related_posts', $post->ID );
+			//echo '<xmp>'; print_r($rel); echo '</xmp>';
+			$output = '';
+				//$output .= '<div class="rotate-cls">';
+                $output .= '<div class="lm_wrapper rotate-cls ' .  $class_to_apply . ' ' . $portfolio_classes .'">';
+                foreach ( $rel as $r ) {
+					$item_class = array();
+					$categories = '';
+					$special_class = '';
+					
+					$custom_fields = get_post_meta($r->ID);
+					if (array_key_exists('status', $custom_fields)) {
+						$antique_status = $custom_fields['status'][0];
+						if ( $antique_status === 'Sold' ) 
+						    continue;
+					}   
+					if (array_key_exists('price', $custom_fields)) {
+						$antique_price = $custom_fields['price'][0];
+					}
+					$terms = get_the_terms($r->ID,'portfolio-types');
+					if( is_array( $terms ) ){
+						foreach( $terms as $term ){
+							$item_class[] = 'category-'. $term->slug;
+							$categories .= '<a href="'. site_url() .'/portfolio-types/'. $term->slug .'">'. $term->name .'</a>, ';
+						}
+						$categories = substr( $categories , 0, -2 );
+					}
+					$item_class[] = get_post_meta( $r->ID, 'mfn-post-size', true );
+					$item_class[] = has_post_thumbnail() ? 'has-thumbnail' : 'no-thumbnail';
+					$item_class = implode(' ', $item_class);
+					
+					// full width sections for list style
+					if( $item_bg = get_post_meta( $r->ID, 'mfn-post-bg', true ) ){
+						$item_bg = 'style="background-image:url('. $item_bg .');"';
+					}
+					
+					$external           = mfn_opts_get( 'portfolio-external' );
+					$ext_link           = get_post_meta( $r->ID, 'mfn-post-link', true );
+					$large_image_url    = wp_get_attachment_image_src( get_post_thumbnail_id( $r->ID ), 'large' );
+					
+					// Image Link ---------------------------------------------------------------------
+					
+					if( in_array( $external, array('disable','popup') ) ){
+						// disable details & link popup 
+						$link_before    = '<a class="link" href="'. $large_image_url[0] .'" rel="prettyphoto">';
+					} elseif( $external && $ext_link ){
+						// link to project website
+						$link_before    = '<a class="link" href="'. $ext_link .'" target="'. $external .'">';
+					} else {
+						// link to project details
+						$link_before    = '<a class="link" href="'. get_permalink($r->ID) .'">';
+					}
+                    //$the_query->the_post();
+					$output .= '<div class="portfolio-item isotope-item '. $item_class .'">';
+                
+							// style: All -------------------------------------------------------------
+					$output .= '<div class="portfolio-item-fw-bg" '. $item_bg .'>';
+					$output .= '<div class="portfolio-item-fill"></div>';
+					$output .= '<div class="portfolio-item-fw-wrapper">';
+								// style: List | Desc ---------------------------------------------
+					$output .= '<div class="list_style_header">';
+					$output .= '<h3 class="entry-title" itemprop="headline">'. $link_before . get_the_title( $r->ID ) .'</a></h3>';
+					$output .= '<div class="links_wrapper">';
+					$output .= '<a href="#" class="button button_js portfolio_prev_js"><span class="button_icon"><i class="icon-up-open"></i></span></a>';
+					$output .= '<a href="#" class="button button_js portfolio_next_js"><span class="button_icon"><i class="icon-down-open"></i></span></a>';
+					$output .= '<a href="'. get_permalink($r->ID) .'" class="button button_left button_theme button_js"><span class="button_icon"><i class="icon-link"></i></span><span class="button_label">'. $translate['readmore'] .'</span></a>';
+					$output .= '</div>';
+					$output .= '</div>';
+								// style: All | Photo ---------------------------------------------
+					$output .= '<div class="image_frame scale-with-grid">';
+					$output .= '<div class="image_wrapper">';       
+					$output .= $link_before;
+                    $output .= get_the_post_thumbnail( $r->ID, 'related_article_size_small' , array( 'class'=>'scale-with-grid', 'itemprop'=>'image' ) );
+                    // $output .= mfn_post_thumbnail( get_the_ID(), 'related_article_size_2x', $style );
+                    $output .= '</a>';
+					$output .= '</div>';
+					$output .= '</div>';
+								// style: All | Desc ----------------------------------------------
+					$output .= '<div class="desc">';
+					$output .= '<div class="title_wrapper">';
+					$output .= '<h5 class="entry-title" itemprop="headline">'. $link_before . get_the_title( $r->ID ) .'</a></h5>';  
+			/*		$output .= '<div class="view-item-section">';
+					$output .= $link_before;
+					$output .= '<div class="view-item-text">View Item</div>';
+					$output .= '</a>';
+					$output .= '</div>';*/
+					if ( $antique_status !== 'Sold' && $antique_price !== '' ) { 
+						$special_class = 'sale-status';
+					}
+					$output .= '<div class="status-main-parent">';
+					$output .= '<p class="antique_archive_title column one-second status-title-section ' .$special_class. '" style="margin-bottom: 30px;">' . $antique_status . '</p>';
+					if ( $antique_status !== 'Sold' && $antique_price !== '' ) { 
+						// $output .= '<p class="antique_archive_title column one-second sale-status" style="margin-bottom: 30px;"><i class="icon-doc-text"></i>' . $antique_status . '</p>';
+						$output .= '<p class="antique_archive_title column one-second status-price-section" style="margin-bottom: 30px;">';
+						if ( $antique_price !== 'P.O.R' && $antique_price !== 'P.O.R.' ) {
+							$output .= '&#36;'; 
+						}
+						$output .= $antique_price . '</p>';
+						
+					}
+					
+					$output .= '<div class="button-love">'. mfn_love() .'</div>';
+					$output .= '</div>';
+					$output .= '</div>';
+
+                    $output .= '<div class="view-item-section">';
+                    $output .= $link_before;
+                    $output .= '<div class="view-item-text">View Item</div>';
+                    $output .= '</a>';
+                    $output .= '</div>';
+                    
+					$output .= '<div class="details-wrapper">';
+					$output .= '<dl>';
+					if( $client = get_post_meta( $r->ID, 'mfn-post-client', true ) ){
+						$output .= '<dt>'. $translate['client'] .'</dt>';
+						$output .= '<dd>'. $client .'</dd>';
+					}
+					$output .= '<dt>'. $translate['date'] .'</dt>';
+					$output .= '<dd>'. $r->post_date .'</dd>';
+					if( $link = get_post_meta( $r->ID, 'mfn-post-link', true ) ){
+						$output .= '<dt>'. $translate['website'] .'</dt>';
+						$output .= '<dd><a target="_blank" href="'. $link .'"><i class="icon-forward"></i>'. $translate['view'] .'</a></dd>';
+					}
+					$output .= '</dl>';
+					$output .= '</div>';
+					$output .= '<div class="desc-wrapper">';
+					$output .= $r->post_excerpt;
+					$output .= '</div>';
+					$output .= '</div>';
+					$output .= '</div>';
+					$output .= '</div>';
+					
+					
+					$output .= '</div>';
+                }
+				//$output .= $output;
+                //$output .= '</ul>';
+				$output .= '</div>';
+				$output .= '<script>
+						jQuery(document).ready(function(){
+  							jQuery(".' . $class_to_apply . '").slick({
+    							slidesToShow : ' . $slides_to_show . ',
+								slidesToScroll : 1,
+								prevArrow : \'<button type="button" class="slick-prev">&lt;</button>\',
+								nextArrow : \'<button type="button" class="slick-next">&gt;</button>\',
+								responsive: [
+								    {
+								        breakpoint: 1024,
+								        settings: {
+								        slidesToShow: 3,
+								        slidesToScroll: 1
+								      }
+								    },
+                                    {
+                                      breakpoint:769,
+                                      settings: {
+                                        slidesToShow: 2,
+                                        slidesToScroll: 1
+                                      }
+                                    },
+                                    {
+                                      breakpoint:767,
+                                      settings: {
+                                        slidesToShow: 1,
+                                        slidesToScroll: 1
+                                      }
+                                    },
+								    {
+								      breakpoint: 600,
+								      settings: {
+								        slidesToShow: 1,
+								        slidesToScroll: 1
+								      }
+								    },
+								    {
+								      breakpoint: 480,
+								      settings: {
+								        slidesToShow: 1,
+								        slidesToScroll: 1
+								      }
+								    }
+								  ]
+  							});
+						});
+					</script>';
+			echo $output;
+                       
+            ?>
+        </div> <!-- .related-posts -->
+        <?php
+		} 
+    }
+endif; // Realted Posts
+
 ?>
 <?php
 
