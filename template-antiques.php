@@ -71,7 +71,12 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
 					$mfn_builder->show();
 					if(get_the_ID() == '23') {					
 						$page_num = (( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1 ); 
-						echo do_shortcode('[rev_slider alias="new-arrivals-main-' . $page_num . '"][/rev_slider]');
+						if($page_num == 1) { 
+							echo do_shortcode('[rev_slider alias="new-arrivals-main-1"][/rev_slider]');
+						}
+						if($page_num == 3) { 
+							echo do_shortcode('[rev_slider alias="new-arrivals-main-3"][/rev_slider]');
+						}
 					}
 				?>
 			</div>
