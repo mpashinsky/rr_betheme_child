@@ -72,6 +72,9 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
 						if($page_num == 1) { 
 							echo do_shortcode('[rev_slider alias="new-arrivals-main-1"][/rev_slider]');
 						}
+						if($page_num == 2) { 
+							echo do_shortcode('[rev_slider alias="new-arrivals-main-2"][/rev_slider]');
+						}
 						if($page_num == 3) { 
 							echo do_shortcode('[rev_slider alias="new-arrivals-main-3"][/rev_slider]');
 						}
