@@ -58,10 +58,20 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
 		<!-- .sections_group -->
 		<div class="sections_group">
 		
-		
-			<!--<div class="extra_content">
-				<?php //mfn_builder_print( mfn_ID(), true ); ?>
-			</div>-->
+			<div class="extra_content">
+				<?php 
+				
+				$portfolio_query = new WP_Query( $portfolio_args );
+				$current_page = $portfolio_query->get( 'paged' );
+				if ( $current_page == 1 ) {
+					$cat_obj = $wp_query->get_queried_object();
+					echo do_shortcode(get_field('top_slider_shortcode',$cat_obj->taxonomy.'_'.$cat_obj->term_id));
+				}
+				$mfn_builder = new Mfn_Builder_Front(mfn_ID(), true);
+				$mfn_builder->show();
+				
+				?>
+			</div>
 			
 			
 			<div class="section section-filters">
