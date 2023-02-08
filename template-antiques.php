@@ -99,7 +99,10 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
 						if($page_num == 10) { 
 							echo do_shortcode('[rev_slider alias="new-arrivals-main-10"][/rev_slider]');
 						}
-						if($page_num == 20) { 
+						if($page_num == 11) {
+							echo do_shortcode('[rev_slider alias="new-arrivals-main-11"][/rev_slider]');
+						}
+						if($page_num == 20) {
 							echo do_shortcode('[rev_slider alias="new-arrivals-main-20"][/rev_slider]');
 						}
 					}
