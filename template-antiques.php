@@ -79,6 +79,7 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
                     $slider = new RevSlider();
                     $revolution_sliders = $slider->getAllSliderAliases();
                     foreach( $revolution_sliders as $revolution_slider ) {
+                        echo $revolution_slider;
                         if( $revolution_slider == $shortcode ) {
                                 echo $revolution_slider;
                              return true;
