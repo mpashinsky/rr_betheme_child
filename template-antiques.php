@@ -69,6 +69,7 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
 				<?php
 					if(get_the_ID() == '23') {
 
+
             $page_num = (( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1 );
             $page_alias = str_replace("/","",$_SERVER['REQUEST_URI']);
             $slider_alias =  $page_alias."-main-".$page_num;
