@@ -69,28 +69,7 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
 				<?php
 					if(get_the_ID() == '23') {
 
-				    $page_num = (( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1 );
-				    $page_alias = str_replace("/","",$_SERVER['REQUEST_URI']);
-				    $slider_alias =  $page_alias."-page-".$page_num;
-            echo $slider_alias
-            function revolution_slider_exists( $slider_alias ) {
-                if( class_exists( 'RevSlider' ) ) {
-                    $slider = new RevSlider();
-                    $revolution_sliders = $slider->get_sliders();
-                    foreach( $revolution_sliders as $revolution_slider ) {
-                        if( $revolution_slider->alias == $slider_alias ) {
-                            return true;
-                        }
-                    }
-                }
-                return false;
-            }
-
-            if ( revolution_slider_exists( $slider_alias ) ) {
-                echo do_shortcode( '[rev_slider alias="'.$slider_alias.'"][/rev_slider]' );
-            }
-            else {
-						//$page_num = (( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1 );
+						$page_num = (( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1 );
 						if($page_num == 1) { 
 							echo do_shortcode('[rev_slider alias="new-arrivals-main-1"][/rev_slider]');
 						}
@@ -126,7 +105,6 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
 						}
 						if($page_num == 20) {
 							echo do_shortcode('[rev_slider alias="new-arrivals-main-20"][/rev_slider]');
-						}
 						}
 					}
 					$mfn_builder = new Mfn_Builder_Front(mfn_ID(), true);
