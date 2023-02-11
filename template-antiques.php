@@ -89,8 +89,8 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
             if ( revolution_slider_exists( $slider_alias ) ) {
                 echo do_shortcode( $slider_alias );
             }
-
-						$page_num = (( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1 ); 
+            else {
+						//$page_num = (( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1 );
 						if($page_num == 1) { 
 							echo do_shortcode('[rev_slider alias="new-arrivals-main-1"][/rev_slider]');
 						}
@@ -126,6 +126,7 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
 						}
 						if($page_num == 20) {
 							echo do_shortcode('[rev_slider alias="new-arrivals-main-20"][/rev_slider]');
+						}
 						}
 					}
 					$mfn_builder = new Mfn_Builder_Front(mfn_ID(), true);
