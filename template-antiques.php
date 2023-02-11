@@ -70,19 +70,9 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
 					if(get_the_ID() == '23') {
 
             $page_num = (( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1 );
-
-            /* $current_page_uri = $_SERVER['REQUEST_URI'];
-            if (get_query_var( 'paged' )) {
-                $page_part_pos = strpos($current_page_uri , '/page');
-                $current_page_alias = substr($current_page_uri, 0, $page_part_pos);
-            }
-            else {
-                $current_page_alias = $current_page_uri;
-            }
-				    $page_alias = str_replace("/", "", $current_page_alias); */
-
 				    $page_alias = get_simple_page_alias( get_query_var( 'paged' ), $_SERVER['REQUEST_URI'] );
-            $slider_shortcode =  get_rev_slider_shortcode_from_alias( $page_alias."-main-".$page_num );
+				    $slider_alias = $page_alias."-main-".$page_num
+            $slider_shortcode =  get_rev_slider_shortcode_from_alias( $slider_alias );
 
             if ( revolution_slider_exists( $slider_alias ) ) {
                 echo do_shortcode( $slider_shortcode );
