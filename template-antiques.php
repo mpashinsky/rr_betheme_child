@@ -71,7 +71,7 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
 
             $page_num = (( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1 );
 
-            $current_page_uri = $_SERVER['REQUEST_URI'];
+            /* $current_page_uri = $_SERVER['REQUEST_URI'];
             if (get_query_var( 'paged' )) {
                 $page_part_pos = strpos($current_page_uri , '/page');
                 $current_page_alias = substr($current_page_uri, 0, $page_part_pos);
@@ -79,23 +79,10 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
             else {
                 $current_page_alias = $current_page_uri;
             }
-				    $page_alias = str_replace("/", "", $current_page_alias);
+				    $page_alias = str_replace("/", "", $current_page_alias); */
 
-				    $slider_alias =  $page_alias."-main-".$page_num;
-            $slider_shortcode =  '[rev_slider alias="'.$slider_alias.'"][/rev_slider]';
-
-            function revolution_slider_exists( $alias ) {
-                if( class_exists( 'RevSlider' ) ) {
-                    $slider = new RevSlider();
-                    $revolution_sliders = $slider->get_sliders();
-                    foreach( $revolution_sliders as $revolution_slider ) {
-                        if( $revolution_slider->alias == $alias ) {
-                             return true;
-                        }
-                    }
-                }
-                return false;
-            }
+				    $page_alias = get_simple_page_alias( get_query_var( 'paged' ), $_SERVER['REQUEST_URI'] );
+            $slider_shortcode =  get_rev_slider_shortcode_from_alias( $page_alias."-main-".$page_num );
 
             if ( revolution_slider_exists( $slider_alias ) ) {
                 echo do_shortcode( $slider_shortcode );

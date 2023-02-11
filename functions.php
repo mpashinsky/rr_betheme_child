@@ -49,6 +49,43 @@ function mfnch_enqueue_styles()
 }
 add_action('wp_enqueue_scripts', 'mfnch_enqueue_styles', 101);
 
+/** Slider revolution **/
+
+/** Checks that slider exists by alias **/
+function revolution_slider_exists( $alias ) {
+
+    if( class_exists( 'RevSlider' ) ) {
+        $slider = new RevSlider();
+        $revolution_sliders = $slider->get_sliders();
+        foreach( $revolution_sliders as $revolution_slider ) {
+            if( $revolution_slider->alias == $alias ) {
+                 return true;
+            }
+        }
+    }
+    return false;
+}
+
+/** Builds slider shortcode from slider alias **/
+function get_rev_slider_shortcode_from_alias( $slider_alias ) {
+
+    return '[rev_slider alias="'.$slider_alias.'"][/rev_slider]';
+}
+
+/** Get page alias without paged **/
+function get_simple_page_alias( $paged, $current_page_uri ) {
+
+    if ($paged) {
+        $page_part_pos = strpos($current_page_uri , '/page');
+        $current_page_alias = substr($current_page_uri, 0, $page_part_pos);
+    }
+    else {
+        $current_page_alias = $current_page_uri;
+    }
+
+    return str_replace("/", "", $current_page_alias);
+}
+
 /** Custom **/
 
 function wpb_image_editor_default_to_gd( $editors ) {
