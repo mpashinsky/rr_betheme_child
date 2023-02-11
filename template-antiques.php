@@ -89,9 +89,7 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
                     $slider = new RevSlider();
                     $revolution_sliders = $slider->get_sliders();
                     foreach( $revolution_sliders as $revolution_slider ) {
-                        //echo $revolution_slider->alias;
                         if( $revolution_slider->alias == $alias ) {
-                             //echo $revolution_slider->alias;
                              return true;
                         }
                     }
@@ -101,48 +99,7 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
 
             if ( revolution_slider_exists( $slider_alias ) ) {
                 echo do_shortcode( $slider_shortcode );
-                //echo $slider_shortcode;
             }
-
-            //else {
-						//$page_num = (( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1 );
-						/*if($page_num == 1) {
-							echo do_shortcode('[rev_slider alias="new-arrivals-main-1"][/rev_slider]');
-						}
-						if($page_num == 2) { 
-							echo do_shortcode('[rev_slider alias="new-arrivals-main-2"][/rev_slider]');
-						}
-						if($page_num == 3) { 
-							echo do_shortcode('[rev_slider alias="new-arrivals-main-3"][/rev_slider]');
-						}
-						if($page_num == 4) { 
-							echo do_shortcode('[rev_slider alias="new-arrivals-main-4"][/rev_slider]');
-						}
-						if($page_num == 5) { 
-							echo do_shortcode('[rev_slider alias="new-arrivals-main-5"][/rev_slider]');
-						}
-						if($page_num == 6) { 
-							echo do_shortcode('[rev_slider alias="new-arrivals-main-6"][/rev_slider]');
-						}*/
-						/* if($page_num == 7) {
-							echo do_shortcode('[rev_slider alias="new-arrivals-main-7"][/rev_slider]');
-						} */
-						/* if($page_num == 8) {
-							echo do_shortcode('[rev_slider alias="new-arrivals-main-8"][/rev_slider]');
-						} */
-						/*if($page_num == 9) {
-							echo do_shortcode('[rev_slider alias="new-arrivals-main-9"][/rev_slider]');
-						}
-						if($page_num == 10) { 
-							echo do_shortcode('[rev_slider alias="new-arrivals-main-10"][/rev_slider]');
-						}
-						if($page_num == 11) {
-							echo do_shortcode('[rev_slider alias="new-arrivals-main-11"][/rev_slider]');
-						}
-						if($page_num == 20) {
-							echo do_shortcode('[rev_slider alias="new-arrivals-main-20"][/rev_slider]');
-						}*/
-						//}
 					}
 					$mfn_builder = new Mfn_Builder_Front(mfn_ID(), true);
 					$mfn_builder->show();
