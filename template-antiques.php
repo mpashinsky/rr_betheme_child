@@ -71,7 +71,7 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
 
 				    $page_num = (( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1 );
 				    $page_alias = str_replace("/","",$_SERVER['REQUEST_URI']);
-				    $slider_alias =  '[rev_slider alias="'.$page_alias."-page-".$page_num.'"]';
+				    $slider_alias =  '[rev_slider alias="'.$page_alias."-page-".$page_num.'"][/rev_slider]';
 
             function revolution_slider_exists( $shortcode ) {
                 if( class_exists( 'RevSlider' ) ) {
