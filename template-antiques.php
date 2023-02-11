@@ -71,7 +71,7 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
 
             $page_num = (( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1 );
             $page_alias = str_replace("/","",$_SERVER['REQUEST_URI']);
-            $slider_alias =  $page_alias."-page-".$page_num;
+            $slider_alias =  $page_alias."-main-".$page_num;
             $slider_shortcode =  '[rev_slider alias="'.$slider_alias.'"][/rev_slider]';
 
             function revolution_slider_exists( $alias ) {
@@ -79,9 +79,9 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
                     $slider = new RevSlider();
                     $revolution_sliders = $slider->get_sliders();
                     foreach( $revolution_sliders as $revolution_slider ) {
-                        echo $revolution_slider->alias;
+                        //echo $revolution_slider->alias;
                         if( $revolution_slider->alias == $alias ) {
-                             echo $revolution_slider->alias;
+                             //echo $revolution_slider->alias;
                              return true;
                         }
                     }
@@ -90,8 +90,8 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
             }
 
             if ( revolution_slider_exists( $slider_alias ) ) {
-                //echo do_shortcode( $slider_shortcode );
-                echo $slider_shortcode;
+                echo do_shortcode( $slider_shortcode );
+                //echo $slider_shortcode;
             }
 
             //else {
