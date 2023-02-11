@@ -80,6 +80,7 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
 					}
 					$mfn_builder = new Mfn_Builder_Front(mfn_ID(), true);
 					$mfn_builder->show();
+
 				?>
 			</div>
 			
