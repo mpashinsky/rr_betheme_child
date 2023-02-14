@@ -86,6 +86,21 @@ function get_simple_page_alias( $paged, $current_page_uri ) {
     return str_replace("/", "", $current_page_alias);
 }
 
+function get_simple_category_page_alias( $paged, $current_page_uri ) {
+
+    if ($paged) {
+        $page_part_pos = strpos($current_page_uri , '/page');
+        $current_page_alias = substr($current_page_uri, 0, $page_part_pos);
+    }
+    else {
+        $current_page_alias = $current_page_uri;
+    }
+    $category_part = 'category';
+    $current_page_alias = substr($current_page_alias, strlen($category_part));
+
+    return str_replace("/", "", $current_page_alias);
+}
+
 /** Custom **/
 
 function wpb_image_editor_default_to_gd( $editors ) {

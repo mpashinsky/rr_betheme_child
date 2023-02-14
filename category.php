@@ -60,18 +60,30 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
 		
 			<div class="extra_content">
 				<?php 
-				
-				$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : ( ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1 );
-				if ($paged == 1) {
-					$cat_obj = $wp_query->get_queried_object();
-					echo do_shortcode(get_field('top_slider_shortcode',$cat_obj->taxonomy.'_'.$cat_obj->term_id));
-				}
-				if ($paged == 2) {
-					$cat_obj = $wp_query->get_queried_object();
-					echo do_shortcode(get_field('top_slider_shortcode_page_2',$cat_obj->taxonomy.'_'.$cat_obj->term_id));
-				}
-				//$mfn_builder = new Mfn_Builder_Front(mfn_ID(), true);
-				//$mfn_builder->show();
+					
+					$page_num = (( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1 );
+					$page_alias = get_simple_category_page_alias( get_query_var( 'paged' ), $_SERVER['REQUEST_URI'] );
+					$slider_alias =  $page_alias."-page-".$page_num; 
+					$slider_shortcode =  '[rev_slider alias="'.$slider_alias.'"]'; 
+
+					if ( revolution_slider_exists( $slider_alias ) ) {
+						echo do_shortcode( $slider_shortcode );
+					}
+					else {
+
+						$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : ( ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1 );
+						if ($paged == 1) {
+							$cat_obj = $wp_query->get_queried_object();
+							echo do_shortcode(get_field('top_slider_shortcode',$cat_obj->taxonomy.'_'.$cat_obj->term_id));
+						}
+						if ($paged == 2) {
+							$cat_obj = $wp_query->get_queried_object();
+							echo do_shortcode(get_field('top_slider_shortcode_page_2',$cat_obj->taxonomy.'_'.$cat_obj->term_id));
+						}
+					}
+
+					//$mfn_builder = new Mfn_Builder_Front(mfn_ID(), true);
+					//$mfn_builder->show();
 				
 				?>
 			</div>
