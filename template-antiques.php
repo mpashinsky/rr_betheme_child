@@ -69,14 +69,14 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
 				<?php
 					if(get_the_ID() == '23') {
 
-            $page_num = (( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1 );
-				    $page_alias = get_simple_page_alias( get_query_var( 'paged' ), $_SERVER['REQUEST_URI'] );
-				    $slider_alias = $page_alias."-main-".$page_num;
-            $slider_shortcode =  get_rev_slider_shortcode_from_alias( $slider_alias );
+ 			        	$page_num = (( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1 );
+				    	$page_alias = get_simple_page_alias( get_query_var( 'paged' ), $_SERVER['REQUEST_URI'] );
+				    	$slider_alias = $page_alias."-main-".$page_num;
+            			$slider_shortcode =  get_rev_slider_shortcode_from_alias( $slider_alias );
 
-            if ( revolution_slider_exists( $slider_alias ) ) {
-                echo do_shortcode( $slider_shortcode );
-            }
+						if ( revolution_slider_exists( $slider_alias ) ) {
+							echo do_shortcode( $slider_shortcode );
+						}
 					}
 					$mfn_builder = new Mfn_Builder_Front(mfn_ID(), true);
 					$mfn_builder->show();
