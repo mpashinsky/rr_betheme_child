@@ -95,7 +95,7 @@ function get_simple_category_page_alias( $paged, $current_page_uri ) {
     else {
         $current_page_alias = $current_page_uri;
     }
-    $category_part = 'category';
+    $category_part = '/category';
     $current_page_alias = substr($current_page_alias, strlen($category_part));
 
     return str_replace("/", "", $current_page_alias);
