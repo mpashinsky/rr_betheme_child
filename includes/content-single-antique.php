@@ -330,6 +330,8 @@ $translate['task'] 			= mfn_opts_get('translate') ? mfn_opts_get('translate-task
 					<a href="/terms">
 					    <input type="submit" class="gform_button button" value="Terms of sale">
 				    </a>
+                    <h4>GET UPDATES ON NEW ITEMS</h4>
+                    <?php echo do_shortcode('[gravityform id=2 title=false description=false ajax=true]') ?>
 				</div>
 			</div>
 		</div>
