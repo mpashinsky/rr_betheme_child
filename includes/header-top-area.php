@@ -155,7 +155,7 @@
         </div>
         <div id="pixelRight">
             <div class="romanov_contact_details">
-                <div class="details_addr"><span>980 N. Michigan Ave, Chicago, IL, USA</span></div>
+                <div class="details_addr"><span>875 N. Michigan Ave, Chicago, IL, USA</span></div>
 				<div class="details_addr"><span><i>(by appointment only)</i></span></div>
                 <div class="details_ph"><a href="tel:1-773-281-5233"><span>Tel. 1-312-335-3937</span></a></div>
                 <div class="details_email"><i class="fas fa-envelope"></i><a href="mailto:info&#64;romanovrussia.com">info@romanovrussia.com</a></div>
