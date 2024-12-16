@@ -658,6 +658,11 @@ if ( ! function_exists( 'responsive_related_posts' ) ) :
     function responsive_related_posts( $post, $class_to_apply, $class_to_hide, $slides_to_show ) {
 		$rel = get_field( 'related_posts', $post->ID );
     	$portfolio_classes  = 'grid col-4';
+        $translate['readmore']      = mfn_opts_get('translate') ? mfn_opts_get('translate-readmore','Read more') : __('Read more','betheme');
+        $translate['client']        = mfn_opts_get('translate') ? mfn_opts_get('translate-client','Client') : __('Client','betheme');
+        $translate['date']          = mfn_opts_get('translate') ? mfn_opts_get('translate-date','Date') : __('Date','betheme');
+        $translate['website']       = mfn_opts_get('translate') ? mfn_opts_get('translate-website','Website') : __('Website','betheme');
+        $translate['view']          = mfn_opts_get('translate') ? mfn_opts_get('translate-view','View website') : __('View website','betheme');
 
         //Check that we have non-sold related posts 		    
         $have_non_sold_posts = false;
