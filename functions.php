@@ -886,14 +886,14 @@ function product_gallery_metabox() {
     global $post;
 	
     // Here we get the current images ids of the gallery
-    $values = get_post_custom($post = get_the_ID() );
+    $values = get_post_custom($post->ID);
     if(isset($values['product_gallery'])) {
         // The json decode and base64 decode return an array of image ids
         //$ids = json_decode(base64_decode($values['product_gallery'][0]));
 		$ids = unserialize($values['product_gallery'][0]);
     }
     else {
-		$image_gallery_from_posts = get_image_gallery_by_attachments(get_the_ID());
+        $image_gallery_from_posts = get_image_gallery_by_attachments($post->ID);
 		if( empty( $image_gallery_from_posts ) ) {
 			
 		}
@@ -933,7 +933,7 @@ function save_product_metaboxes($post_id) {
         || !wp_verify_nonce($_POST['meta_box_nonce'], 'my_meta_box_nonce'))
         return;
     // Check if user has right access level
-    if (!current_user_can('edit_post'))
+    if (!current_user_can('edit_post', $post_id))
         return;
  
     // Check if data is in post
