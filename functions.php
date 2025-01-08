@@ -56,12 +56,14 @@ function revolution_slider_exists( $alias ) {
 
     if( class_exists( 'RevSlider' ) ) {
         $slider = new RevSlider();
-        $revolution_sliders = $slider->get_sliders();
+        return $slider->alias_exists($alias);
+
+        /*$revolution_sliders = $slider->get_sliders();
         foreach( $revolution_sliders as $revolution_slider ) {
             if( $revolution_slider->alias == $alias ) {
                  return true;
             }
-        }
+        }*/
     }
     return false;
 }
