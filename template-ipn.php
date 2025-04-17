@@ -92,7 +92,9 @@ function verifyIPN()
         	error_log(date('[Y-m-d H:i e] '). "Payment completed. ".$res." ".$_POST['item_name']." ".$_POST['item_number']." ".$_POST['reference_id']." ".$_POST['payment_status']. PHP_EOL, 3, LOG_FILE);
     	    //Reserve item
     	    reserveItem($_POST['item_number']);
-    	    reserveItem($_POST['reference_id']);
+            if (isset($_POST['reference_id'])) {
+                reserveItem($_POST['reference_id']);
+            }
     	}
         return true;
     } else {
