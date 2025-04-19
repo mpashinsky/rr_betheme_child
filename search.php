@@ -13,6 +13,7 @@ get_header();
 // $translate['at'] 			= mfn_opts_get('translate') ? mfn_opts_get('translate-at','at') : __('at','betheme');
 // $translate['readmore'] 		= mfn_opts_get('translate') ? mfn_opts_get('translate-readmore','Read more') : __('Read more','betheme');
 
+global $portfolio_query;
 // Class
 $portfolio_classes 	= '';
 $section_class 		= array();
