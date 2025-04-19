@@ -78,9 +78,7 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
 								<?php
 
 								echo '<ul class="portfolio_group lm_wrapper isotope '. $portfolio_classes .'">';
-                                if (isset($portfolio_query)) {
-                                    echo romanov_antiques_archive($portfolio_query);
-                                }
+							 		echo romanov_antiques_archive( $portfolio_query );
 								echo '</ul>';
 								
 									/*
