@@ -182,7 +182,7 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
 <?php
 if(get_the_ID() == '23') { ?>
     <div style = "text-align: center; margin: 20px; padding: 20px" >
-        <a style = "background-color:#dd9933; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom" href = "/category/under-2900-2/" title = "Under $2.900" > Under $2.900 </a >
+        <a style = "background-color:#dd9933; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom" href = "/category/under-2900-2/" title = "Under $2,900" > Under $2,900 </a >
     </div >
 <?php } ?>
 
