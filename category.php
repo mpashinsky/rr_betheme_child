@@ -232,4 +232,8 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
         <a style="background-color:#dd9933; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom" href="/category/under-2900-2/" title="Under $2.900">Under $2.900</a>
     </div>
 <?php } ?>
+<?php echo "<pre>";
+print_r($category_name);
+echo "</pre>";
+?>
 <?php get_footer(); ?>
