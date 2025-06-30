@@ -235,11 +235,6 @@
 							
 						echo $logo_after;*/
 					?>
-<div class="romanov_contact_details">
-<div class="details_ph"><a href="tel:1-312-335-3937"><span>Tel. 1-312-335-3937</span></a></div>
-<div class="slogan"><span>We sell the most exquisite Romanov era (1613-1917) Russian antiques and European antique and vintage jewelry</span></div>
-<div class="details_email"><a href="mailto:RomanovRussia@aol.com ">RomanovRussia@aol.com </a> </div></div>
-					
 				</div>-->
 			
 				<div class="menu_wrapper">
