@@ -227,4 +227,9 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
     $cat_obj = $wp_query->get_queried_object();
     echo do_shortcode(get_field('slider_shortcode',$cat_obj->taxonomy.'_'.$cat_obj->term_id));
 } ?>
+<?php if ( $category_name == 'new_arrivals' ) { ?>
+    <div style="text-align: center; margin: 20px; padding: 20px">
+        <a style="background-color:#dd9933; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom" href="/category/under-2900-2/" title="Under $2.900">Under $2.900</a>
+    </div>
+<?php } ?>
 <?php get_footer(); ?>
