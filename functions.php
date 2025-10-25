@@ -847,8 +847,6 @@ if ( ! function_exists( 'responsive_related_posts' ) ) :
   							jQuery(".' . $class_to_apply . '").slick({
     							slidesToShow : ' . $slides_to_show . ',
 								slidesToScroll : 1,
-								variableWidth: true,
-								arrows: true,
 								prevArrow : \'<button type="button" class="slick-prev">&lt;</button>\',
 								nextArrow : \'<button type="button" class="slick-next">&gt;</button>\',
 								responsive: [
