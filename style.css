@@ -7,22 +7,50 @@ Template:       betheme
 (optional values you can add: Theme URI, Author URI, Version, License, License URI, Tags, Text Domain)
 */
 
-.pagination { clear:both; padding:0 0 10px 200px; position:relative; font-size:11px; line-height:13px; } .pagination span, .pagination a { display:block; float:left; margin: 2px 2px 2px 0; padding:6px 9px 5px 9px; text-decoration:none; width:auto; color:#fff; background: #555; } .pagination a:hover{ color:#fff; background: #3279BB; } .pagination .current{ padding:6px 9px 5px 9px; background: #3279BB; color:#fff; }
+.pagination {
+    clear: both;
+    padding: 0 0 10px 200px;
+    position: relative;
+    font-size: 11px;
+    line-height: 13px;
+}
+
+.pagination span, .pagination a {
+    display: block;
+    float: left;
+    margin: 2px 2px 2px 0;
+    padding: 6px 9px 5px 9px;
+    text-decoration: none;
+    width: auto;
+    color: #fff;
+    background: #555;
+}
+
+.pagination a:hover {
+    color: #fff;
+    background: #3279BB;
+}
+
+.pagination .current {
+    padding: 6px 9px 5px 9px;
+    background: #3279BB;
+    color: #fff;
+}
 
 
 @media (max-width: 768px) {
-/* sumo me css */
-a[title="SumoMe"] {
-    display: none!important;
-    opacity: 0 !important;
-}
+    /* sumo me css */
+    a[title="SumoMe"] {
+        display: none !important;
+        opacity: 0 !important;
+    }
 }
 
 
 /* pinterest image css */
 body span[data-pin-href] {
     background-image: url(/wp-content/uploads/pin.png) !important;
-    background-color: transparent!important;
+    background-color: transparent !important;
     box-shadow: none;
 }
 
@@ -39,17 +67,18 @@ body span[data-pin-href] {
     text-indent: 35px !important;
     overflow: hidden;
 }
+
 body span[data-pin-href]:hover {
     box-shadow: none;
 }
+
 /*.page-template-template-antiques:hover {
     display: none;
 }*/
 
 body.archive span[data-pin-href],
-.page-template-template-antiques span[data-pin-href]
- {
-    display:none!important;
+.page-template-template-antiques span[data-pin-href] {
+    display: none !important;
 }
 
 /* Contacts - header begin */
@@ -61,4 +90,2036 @@ body.archive span[data-pin-href],
 .romanov_contact_details .details_email .fas {
     padding-right: 0.5em;
 }
+
 /* Contacts - header end */
+
+/* Enter Your Custom CSS Here */
+/* details below icon */
+/*.romanov_contact_details .details_ph:before {
+     content: "Tel.";
+    color: #ffffff;
+    font-size: 18px;
+    margin-right: 4px;
+} */
+/** Contact form - thank you page **/
+div.wpcf7 .ajax-loader {
+    margin-left: 15px;
+}
+
+.wpcf7-form-control.wpcf7-submit {
+    font-size: 1em;
+    width: auto;
+    margin: 0px;
+}
+
+.wpcf7-response-output {
+    background: #D49B50 !important;
+}
+
+span.wpcf7-list-item {
+    display: block;
+}
+
+.wpcf7 {
+    text-align: center;
+}
+
+@media (min-width: 801px) {
+    .wpcf7-form-control-wrap.source, .wpcf7-form-control-wrap.textarea-38 {
+        text-align: left;
+        width: 50%;
+    }
+}
+
+@media (max-width: 800px) {
+    .wpcf7-form-control-wrap.source, .wpcf7-form-control-wrap.textarea-38 {
+        text-align: left;
+        width: 100%;
+    }
+}
+
+/** Video PopUp / Youtube in gallery Start **/
+.vp-a, .youtube-a {
+    position: relative;
+    display: inline-block;
+}
+
+.vp-a:before, .youtube-a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: transparent url(/wp-content/uploads/2019/09/youtube_social_icon_dark.png) center center no-repeat;
+    opacity: 0.85;
+}
+
+.vp-a:hover:before, .youtube-a:hover:before {
+    background: transparent url(/wp-content/uploads/2019/09/youtube_social_icon_red.png) center center no-repeat;
+    opacity: 1;
+}
+
+/** Video PopUp End **/
+
+.romanov_contact_details a {
+    font-size: 18px;
+}
+
+.romanov_contact_details span.details_email {
+    padding-left: 10px;
+}
+
+.romanov_contact_details a {
+    color: #ffffff;
+}
+
+.slogan {
+    font-style: italic;
+    color: white;
+}
+
+.details_ph a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.details_email a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* details below icon end*/
+/* testimonials page */
+.page-id-20124 p.normal_head, .home p.normal_head {
+    font-size: 25px !important;
+    color: #ffffff !important;
+}
+
+.page-id-20124 p.normal_head_buyer, .home p.normal_head_buyer {
+    font-size: 19px !important;
+}
+
+.page-id-20124 p.head_text, .home p.head_text {
+    font-size: 25px !important;
+    color: #ffffff !important;
+}
+
+.page-id-20124 hr.hr_narrow.hr_color, .home hr.hr_narrow.hr_color {
+    width: 100%;
+    margin: 0 !important;
+}
+
+.page-id-20124 .hr_color, .home .hr_color {
+    color: #ffffff;
+    background: #ffffff;
+}
+
+.page-id-20124 a.testimonials_blog, .home a.testimonials_blog {
+    color: #dcdee3;
+    text-decoration: none;
+}
+
+.column_attr p {
+    margin: 0 !important;
+}
+
+.page-id-20124 p.normal_head {
+    padding-bottom: 15px;
+}
+
+p.normal_head_buyer {
+    padding-bottom: 15px;
+}
+
+.page-id-20124 p.head_text {
+    padding-bottom: 15px;
+}
+
+p.normal_head_buyer {
+    color: #D49B50 !important;
+}
+
+p.item_no {
+    color: #D49B50 !important;
+    font-size: 19px !important;
+}
+
+.home p.item_no {
+    margin: 0px;
+    text-align: center;
+}
+
+.home p.normal_head_buyer {
+    margin: 0;
+}
+
+.home p.head_text {
+    padding-bottom: 0;
+}
+
+.home hr.hr_narrow.hr_color {
+    display: none;
+}
+
+.testimonials_subhead p {
+    font-family: "Crimson Text";
+    font-size: 25px;
+}
+
+.home p.normal_head {
+    text-align: center;
+}
+
+.home p.normal_head_buyer {
+    text-align: center;
+}
+
+.home p.head_text {
+    text-align: center;
+}
+
+/* testimonials page end*/
+
+/* Common css */
+.margin-remove {
+    margin-bottom: 0px !important;
+}
+
+.margin-remove .wpb_wrapper > div {
+    margin-bottom: 0px;
+}
+
+/*#Content {
+   padding-top: 50px !important;
+   padding-bottom: 20px !important;
+}*/
+
+/* common category page css */
+.page-template-template-antiques .image_frame a,
+.archive .image_frame a,
+.related-posts .image_frame a,
+.page-id-14582 .image_frame a,
+.page-template-template-collections .image_frame a {
+    width: 270px;
+    height: 270px;
+    margin: 0 auto;
+    /*  display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; */
+}
+
+/*.portfolio-item-fw-bg .portfolio-item-fw-wrapper .image_frame.scale-with-grid .image_wrapper {
+    width: 270px;
+    height: 270px;
+    margin: 0 auto;
+}*/
+/* common category page css */
+/* icon image css*/
+.icon_box.icon_position_left .image_wrapper {
+    width: 52px !important;
+    height: 52px !important;
+}
+
+/* icon image css end*/
+/* pinterest image css */
+body a[data-pin-href] {
+    display: none !important;
+}
+
+.single-antiques a[data-pin-href] {
+    display: block !important;
+}
+
+
+/* pinterest image css end*/
+/* Logo css */
+#Top_bar #logo {
+    padding: 15px 0px 0px;
+}
+
+/* Logo css end */
+/* Slider css */
+.tp-caption.rev-btn-new:hover a,
+.rev-btn-new:hover a {
+    color: #000000 !important
+}
+
+span.rs-label {
+    display: none;
+}
+
+/* Slider css end */
+body.admin-bar {
+    position: static;
+}
+
+body.error404 {
+    height: auto;
+}
+
+#Content .portfolio_wrapper .portfolio-item-fw-bg .image_wrapper img.scale-with-grid {
+    width: 100%;
+    height: auto;
+    position: relative !important;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.row-pad {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.vc_row.wpb_row.vc_row-fluid.row-pad-bottom.row-pad {
+    padding-bottom: 0px;
+}
+
+.image_frame .image_wrapper .mask {
+    top: 0;
+}
+
+img.scale-with-grid, #Content img {
+    z-index: 5;
+}
+
+.image_frame .image_wrapper .image_links {
+    z-index: 9;
+}
+
+.builder-page-link {
+    color: #D49B50;
+}
+
+/* page animation off*/
+.image_links.double {
+    display: none;
+}
+
+img.scale-with-grid.wp-post-image {
+    position: static !important;
+}
+
+.image_frame .image_wrapper .mask {
+    z-index: 0;
+}
+
+/* page animation off end */
+/* 404 page css */
+#Error_404 {
+    overflow: visible;
+    position: relative;
+    margin-top: 50px;
+}
+
+#Error_404 .column.one {
+    margin-bottom: 0px;
+}
+
+/* 404 page css end */
+
+/* slider button link color*/
+
+div#slide-18-layer-8 a {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+div#slide-18-layer-8 a:hover {
+    color: #333333 !important;
+}
+
+div#slide-18-layer-8.tp-caption rev-btn-new div:hover {
+    color: #000 !important;
+}
+
+/* slider button link color end */
+/* Sub Menu underline*/
+.ubermenu.ubermenu-main .ubermenu-item-normal > .ubermenu-target:hover {
+    color: #fff;
+    transition: color 0.6s ease;
+}
+
+/* Sub Menu underline end */
+/* menu search icon*/
+img.ubermenu-image.ubermenu-image-size-full {
+    padding-top: 3px;
+}
+
+/* menu search icon end*/
+/* menu box shadow*/
+#menu-item-14224:hover, #menu-item-14218:hover {
+    box-shadow: 0 2px 0px 0 #D49B50;
+}
+
+/* menu box shadow end*/
+/* Common css end */
+/* Header Css */
+/* Header Css end  */
+/*menu font css*/
+#menu-item-2246:hover,
+#menu-item-2252:hover,
+#menu-item-2280:hover,
+#menu-item-2308:hover,
+#menu-item-2284:hover,
+#menu-item-2268:hover,
+#menu-item-2631:hover {
+    box-shadow: 0 2px 0px 0 #D49B50;
+}
+
+.img-border .ubermenu-image {
+    border-radius: 50%;
+    height: 50px !important;
+    width: 50px !important;
+}
+
+/*menu font css end*/
+/* home page css */
+.rev_slider_wrapper img {
+    pointer-events: none;
+}
+
+.home .column.mcb-column.one-fourth.column_trailer_box .trailer_box .scale-with-grid {
+    max-width: 100%;
+    height: 300px !important;
+    min-height: 300px;
+    max-height: 300px;
+    width: 100%;
+}
+
+.home .trailer_box a:after {
+    opacity: 1;
+    background: rgba(0, 0, 0, .60);
+}
+
+.home-style-boxes h2 {
+    letter-spacing: normal;
+}
+
+a.vc_general.vc_btn3.vc_btn3-size-md.vc_btn3-shape-square.vc_btn3-style-custom {
+    border-radius: 3px;
+    font-size: 19px;
+    padding: 7px 17px;
+}
+
+.vc_btn3-container.home-read-more.vc_btn3-left {
+    padding: 0;
+}
+
+a.vc_general.vc_btn3.vc_btn3-size-md.vc_btn3-shape-square.vc_btn3-style-custom:hover {
+    background: #fff !important;
+    color: #333333 !important;
+}
+
+/*.home #Content {
+    background-color: #0A0A0A !important;
+}*/
+/* home page css end  */
+/* portfolio page meta data hide*/
+.post-meta.clearfix {
+    display: none;
+}
+
+/* end portfolio page meta data hide*/
+/*Portfolio page icon change to arrow*/
+.page-id-23 .icon-link:before,
+.search-results .icon-link:before,
+.related-posts .icon-link:before,
+.archive .icon-link:before,
+.icon-link:before {
+    content: '\e876' !important;
+}
+
+/* pinterest image css */
+body a[data-pin-href] {
+    background-image: url(/wp-content/uploads/pin.png) !important;
+
+}
+
+body a[data-pin-href] {
+    cursor: pointer !important;
+    background-repeat: none !important;
+    background-size: auto !important;
+    height: 35px !important;
+    padding: 0 !important;
+    vertical-align: baseline !important;
+    text-decoration: none !important;
+    width: 35px !important;
+    background-position: right bottom !important;
+}
+
+dl.gallery-item img {
+    z-index: 10;
+}
+
+/* pinterest image css end */
+/* Last page css */
+.last-page-disclaimer {
+    font-style: italic;
+    font-size: 20px;
+    line-height: 30px;
+    color: #D49B50;
+    text-align: center;
+}
+
+/* Last Page css end */
+/* our company page css */
+.page-id-26 .section.mcb-section {
+    background-image: none !important;
+}
+
+.our-company-title h3 {
+    letter-spacing: normal !important;
+}
+
+.page-id-26 .image_wrapper {
+    display: block;
+}
+
+/* our company psge css end */
+/* top header css */
+.top_bar_left .logo img.logo-main.scale-with-grid {
+    pointer-events: none;
+}
+
+/* top header css end */
+
+/* contact page css  */
+.gform_wrapper .contactus-form .top_label input.medium,
+.gform_wrapper .contactus-form .top_label textarea.textarea {
+    width: 100%;
+}
+
+body .gform_wrapper .contactus-form input[type=text],
+body .gform_wrapper .contactus-form textarea {
+    padding: 5px 8px;
+}
+
+.page-id-28 input[type="submit"] {
+    padding: 5px 30px;
+}
+
+.page-id-28 .image_frame .image_wrapper {
+    border-color: #e2e2e2;
+    min-height: 0 !important;
+    max-height: auto !important;
+    height: auto !important;
+}
+
+.page-id-28 .gform_wrapper input[type=text],
+.page-id-28 .gform_wrapper .contactus-form .top_label textarea.textarea {
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.page-id-28 .gform_wrapper div.validation_error {
+    background: #D49B50;
+}
+
+/* contact page css end */
+
+/*antique-vintage jewelry page css (Anil)*/
+.page-id-4056 #Content {
+    background-color: #020202 !important;
+}
+
+.page-id-4056 h2 {
+    letter-spacing: normal !important;
+}
+
+.page-id-4056 button.ubtn.ubtn-custom.ubtn-no-hover-bg.none.ubtn-center.tooltip-565555de8fccf {
+    background: rgb(212, 175, 55) !important;
+    color: rgb(255, 255, 255) !Important;
+}
+
+.page-id-4056 a.click-here-button {
+    background: #D49B50;
+    color: #ffffff;
+    padding: 7px 15px;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: all linear 100ms;
+}
+
+.page-id-4056 a.click-here-button:hover {
+    background: #ffffff;
+    color: #333333;
+    padding: 7px 15px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.page-id-4056 .row-one:before {
+    background: url("/wp-content/uploads/2015/01/home_jeweller_line_silver.png") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    content: "";
+    display: block;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 21;
+}
+
+/*antique-vintage jewelry page css end */
+/*** Pagination css ***/
+.pager .pages {
+    border: 1px solid #6F6969;
+    background-color: #0A0A0A;
+}
+
+a.page.active {
+    border: 1px solid #2B2B2B;
+    background-color: #D49B50 !important;
+}
+
+.pager .pages a:hover {
+    background-color: #D49B50 !important;
+}
+
+/***End***/
+
+/* search page css*/
+.search-results .section_wrapper.clearfix {
+    max-width: 100% !important;
+}
+
+.post-links.search-read-more-link {
+    float: none;
+    padding-left: 0px;
+}
+
+.search-results .post-footer {
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+.search-results [class^="icon-"]:before,
+.search-results [class*=" icon-"]:before,
+.related-posts [class*=" icon-"]:before,
+.archive [class*=" icon-"]:before,
+[class*=" icon-"]:before {
+    margin-left: 0px;
+}
+
+.search-post-title {
+    margin-top: 20px;
+}
+
+.search-results .image_frame.scale-with-grid .image_wrapper .image_links.double a:first-child,
+.related-posts .image_frame.scale-with-grid .image_wrapper .image_links.double a:first-child,
+.archive .image_frame.scale-with-grid .image_wrapper .image_links.double a:first-child,
+.image_frame.scale-with-grid .image_wrapper .image_links.double a:first-child {
+    display: none;
+}
+
+.search-results .scale-with-grid img,
+.related-posts .scale-with-grid img,
+.archive .scale-with-grid img,
+.scale-with-grid img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/*.search-results .image_wrapper,
+.related-posts .image_wrapper,
+.image_wrapper
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}*/
+.search-results .image_frame .image_wrapper .image_links.double a,
+.related-posts .image_frame .image_wrapper .image_links.double a,
+.archive .image_frame .image_wrapper .image_links.double a,
+.image_frame .image_wrapper .image_links.double a {
+    width: 100%;
+}
+
+/* search page css end */
+/* Related post css */
+/* related post slider css  */
+.related-posts .list_style_header {
+    display: none;
+}
+
+.related-posts .details-wrapper {
+    display: none;
+}
+
+/* related post slider css  end */
+.related-posts .image_frame .image_wrapper img {
+    pointer-events: none;
+}
+
+.related-posts {
+    margin-bottom: 30px;
+    margin-top: 43px;
+    z-index: 5;
+}
+
+.related-posts ul.portfolio_group.lm_wrapper.rotate-cls.isotope.grid.col-4.slick-initialized.slick-slider {
+    display: inline-block;
+}
+
+.related-posts .view-item-text {
+    font-size: 18px;
+    line-height: 14px;
+}
+
+.related-posts .portfolio-item:focus {
+    outline: none;
+}
+
+/*.related-posts .image_frame .image_wrapper,
+.image_frame .image_wrapper
+{
+    border-color: #e2e2e2;
+    min-height: 270px;
+    max-height: 270px;
+    height: 270px;
+}*/
+h2.related-posts-title {
+    margin-bottom: 40px;
+}
+
+.related-posts .portfolio_group.grid .portfolio-item {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+}
+
+.slick-next, .slick-prev {
+    position: absolute;
+    display: block;
+    height: 1em;
+    padding-bottom: 10px !important;
+    padding-left: 5px !important;
+    width: 1em;
+    line-height: 0;
+    font-size: 28px;
+    cursor: pointer;
+    background: 0 0;
+    /*color: transparent;*/
+    margin-top: -10px;
+    border: none;
+    outline: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.related-posts button {
+    padding: 2px 20px;
+}
+
+.related-posts .slick-next {
+    right: -35px;
+}
+
+.related-posts .slick-prev {
+    left: -35px;
+}
+
+/*.single-antiques .related-posts .image_frame .image_wrapper {
+    min-height: 0 !important;
+    max-height: none !important;
+    height: auto !important;
+}*/
+h2.related-posts-title {
+    margin-bottom: 40px;
+    color: #fff;
+    letter-spacing: normal;
+}
+
+.related-posts .portfolio_group .portfolio-item .desc {
+    padding-bottom: 0px;
+}
+
+.related-posts p.antique_archive_title.column.one-second.status-title-section {
+    margin-bottom: 0px !important;
+}
+
+.section-post-related {
+    padding-top: 25px;
+}
+
+/* Related post section css */
+/* singlr portfolio page css */
+.portfolio-main-content {
+    margin-bottom: 25px;
+}
+
+.portfolio-category-list {
+    display: inline-block;
+    /* margin-bottom: 20px;*/
+}
+
+.portfolio-tag-list h5 {
+    margin-bottom: 5px;
+}
+
+.reserved-status p {
+    margin-bottom: 0px;
+}
+
+.portfolio-category-list a,
+.portfolio-tag-list a {
+    font-size: 18px;
+    line-height: 27px;
+    font-style: italic;
+    color: #D49B50;
+}
+
+.related-posts .lm_wrapper.rotate-cls.isotope.grid.col-4.slick-initialized.slick-slider {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.related-posts .portfolio-item-fw-wrapper {
+    width: calc(100% - 1em);
+    margin-left: 7px;
+}
+
+/*.related-posts img.scale-with-grid{
+    min-width: 280px;
+}*/
+.related-posts .desc {
+    margin: 20px 0;
+}
+
+.related-posts .status-main-parent {
+    float: none;
+    position: relative;
+    display: inline-block;
+    margin-top: -5px;
+    text-align: center;
+    left: 0;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+/* Archive page css */
+
+p.antique_archive_title.column.one-second.sale-status {
+    color: #D49B50;
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Mohan 17/11/15 status-main-parent Come in one line */
+.page-template-template-antiques p.antique_archive_title.column.one-second,
+.related-posts p.antique_archive_title.column.one-second,
+.archive p.antique_archive_title.column.one-second,
+p.antique_archive_title.column.one-second {
+    font-size: 18px !important;
+    width: auto !important;
+    clear: none;
+    /*margin:10px 7px !important;*/
+    margin: 0px 7px !important;
+    font-style: normal !important;
+}
+
+/* Mohan 17/11/15 Removed Destortion */
+/*.page-template-template-antiques .scale-with-grid img {
+   max-width: 100%;
+   /* height: 300px !important;
+    min-height: 300px;
+    max-height: 300px;
+}*/
+/* Archive page css end */
+/* portfolio single page css */
+.single-antiques .portfolio-category-list p {
+    display: none !important;
+}
+
+.single-antiques .portfolio-category-list {
+    display: block;
+}
+
+.single-antiques span.meta-value.reserved-status {
+    display: block;
+}
+
+.single-antiques .section.section-post-footer {
+    display: none;
+}
+
+.single-antiques .column.one-third {
+    margin-bottom: 0px;
+}
+
+p.antique_archive_title.column.one-second.status-price-section {
+    line-height: 23px;
+}
+
+.portfolio_group .portfolio-item .desc .title_wrapper h5 {
+    text-align: center;
+}
+
+.portfolio-category-list {
+    font-size: 18px;
+    line-height: 27px;
+    font-style: italic;
+}
+
+.portfolio-category-list h5.template-sidebar-heading {
+    font-style: normal;
+}
+
+h1.entry-title.romanov-custom-template-header {
+    font-size: 35px;
+    line-height: 51px;
+}
+
+h5.template-sidebar-heading,
+.portfolio-tag-list h5 {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.portfolio-main-content,
+.meta-value-parent {
+    border-bottom: 1px solid #dcdee3;
+    margin-bottom: 22px;
+    padding-bottom: 15px;
+}
+
+.meta-value-parent span.meta-value p {
+    margin-bottom: 0px !important;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+span.meta-value.portfolio-tag-list {
+    display: block;
+    border-bottom: 1px solid #dcdee3;
+    margin-bottom: 22px;
+    padding-bottom: 15px;
+}
+
+.meta-value-parent.reference-section {
+    border-bottom: none;
+}
+
+.portfolio-main-content .the_content_wrapper p {
+    padding-bottom: 5px;
+}
+
+.portfolio-main-content {
+    margin-bottom: 20px;
+}
+
+.portfolio-main-content .the_content_wrapper p:first-letter {
+    text-transform: uppercase;
+}
+
+.meta-value-parent .jwellry-product-price p {
+    font-size: 28px;
+    line-height: 45px;
+}
+
+span.meta-value.jwellry-product-price p,
+.reference-section .reserved-status p {
+    font-style: normal !important;
+}
+
+.column.antique_masonry {
+    margin-bottom: 14px;
+}
+
+.single-antiques .the_content_wrapper p {
+    color: #dcdee3;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.title_wrapper.single-antiques-template-header {
+    padding-left: 0.5%;
+}
+
+.view-item-section a {
+    color: #D49B50;
+}
+
+.view-item-section a:hover {
+    color: #847049;
+}
+
+.view-item-section {
+    /*display: inline-block;
+    float: left;*/
+    display: block;
+    text-align: center;
+
+}
+
+.antiques-templates-disclaimer {
+    font-style: italic;
+    font-size: 18px;
+    line-height: 27px;
+    color: #D49B50;
+}
+
+/* paypal button css */
+form.paypal-button-section {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+form.paypal-button-section:focus {
+    outline: none;
+    border: none;
+}
+
+form.paypal-button-section input[type="image"]:focus {
+    outline: none;
+}
+
+/* paypal button css end */
+/* portfolio single page css end  */
+
+/* footer call to action*/
+.footer-callto-action-iconbox {
+    text-transform: uppercase;
+}
+
+.footer-callto-action-iconbox .icon_box.icon_position_left .image_wrapper {
+    top: 20px;
+}
+
+.footer-callto-action-iconbox .icon_box.icon_position_left {
+    min-height: auto;
+}
+
+.footer-callto-action-iconbox {
+    margin-bottom: 0px;
+    margin-top: 14px;
+}
+
+.footer-callto-action-iconbox .icon_box.icon_position_left {
+    min-height: 0px;
+}
+
+.footer-callto-action-iconbox h4 {
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.section-border-bottom {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    background-color: #000000 !important;
+}
+
+/*
+.doller-sign-img .icon_box.icon_position_left .image_wrapper {
+    top: 50%;
+    transform: translateY(-50%)!important;
+    width: 52px;
+    height: 52px;
+}*/
+.footer-callto-action-iconbox.footer-cart-section.doller-sign-img {
+    transition: all 0.2s ease-in-out;
+}
+
+/*.footer-callto-action-iconbox.footer-cart-section.doller-sign-img :hover .image_wrapper {
+    -webkit-transform: scale(0.93);
+    -moz-transform: scale(0.93);
+    -ms-transform: scale(0.93);
+    -o-transform: scale(0.94);
+    transform: scale(0.94);
+        -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}*/
+/*.footer-callto-action-iconbox .icon_box .desc_wrapper h4:before {
+    content: "";
+    display: block;
+    width: 0px;
+    margin: 0 auto;
+    height: 2px;
+    top: -15px;
+    position: relative;
+    background-color: #D49B50;
+}*/
+
+.footer-callto-action-iconbox .icon_box:hover .desc_wrapper h4:before {
+    width: 100px;
+}
+
+.footer-callto-action-iconbox .icon_box .desc_wrapper h4:before {
+    transition: all 0.3s ease-in-out;
+}
+
+.footer_action .container {
+    max-width: 100%;
+}
+
+.footer_action .column.one.column_column {
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+}
+
+.footer-callto-action-iconbox .icon_wrapper:before {
+    background-color: transparent !important;
+}
+
+/*.footer-callto-action-iconbox .icon_box .desc_wrapper h4 {
+    color: #D49B50!important;
+}*/
+#Footer .footer_action .section-border-bottom .one,
+#Footer .footer_action .one {
+    padding-top: 20px;
+}
+
+#Footer .footer_action .one {
+    margin-bottom: 0px;
+}
+
+/* icon design css */
+
+.footer-callto-action-iconbox .icon_box .icon_wrapper {
+    width: auto;
+    height: auto;
+    text-align: center;
+    line-height: 75px;
+    font-size: 35px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto 15px;
+    border-width: 0;
+    border-style: none;
+    display: block;
+    border-radius: 0;
+    background-image: none;
+}
+
+.footer-callto-action-iconbox .icon_box .icon_wrapper {
+    background-color: transparent;
+    box-shadow: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.page-template-template-antiques .footer-callto-action-iconbox .image_frame .image_wrapper,
+.footer-callto-action-iconbox .wp-caption img, .footer-callto-action-iconbox .icon_box .icon_wrapper:before {
+    min-height: auto;
+    max-height: auto;
+    height: auto;
+    border: none;
+    color: #D49B50 !important;
+}
+
+.footer-callto-action-iconbox .icon_box:hover .footer-callto-action-iconbox .icon_wrapper, .footer-callto-action-iconbox .icon_box a:hover .footer-callto-action-iconbox .icon_wrapper {
+    color: #D49B50;
+}
+
+.footer-callto-action-iconbox .icon_box.icon_position_left .icon_wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-shadow: none;
+}
+
+.footer-callto-action-iconbox .icon_box:hover .icon_wrapper, .footer-callto-action-iconbox .icon_box a:hover .icon_wrapper {
+    color: #D49B50;
+}
+
+.footer-callto-action-iconbox .icon_box.icon_position_left {
+    padding-left: 70px;
+}
+
+/*.footer-callto-action-iconbox:last-child {
+    margin: 20 0 0 !important;
+}*/
+/*.footer-callto-action-iconbox.footer-cart-section .icon_box .icon_wrapper {
+    font-size: 38px;
+    }*/
+#Footer .footer_copy .copyright {
+    margin-bottom: 15px !important;
+}
+
+/* footer call to action end */
+/* Footer Contact form css */
+.ff-contact-form_wrapper.gform_wrapper .top_label input.medium {
+    width: 100% !important;
+    border-radius: 3px;
+}
+
+.ff-contact-form_wrapper.gform_wrapper .gfield_required {
+    display: none;
+}
+
+.ff-contact-form_wrapper input[type="submit"] {
+    padding: 5px 35px;
+}
+
+.ff-contact-form_wrapper.gform_wrapper .gform_footer {
+    margin-top: 10px !important;
+}
+
+.ff-contact-form_wrapper label.gfield_label {
+    display: none !important;
+}
+
+.gform_confirmation_wrapper .gform_confirmation_message {
+    background: #D49B50;
+}
+
+/* Footer Contact form css end */
+/* category page css */
+p.antique_archive_title.column.one-second.status-title-section {
+    color: #D49B50;
+}
+
+.page-template-template-antiques .image_frame .image_wrapper .image_links.double a {
+    width: 100%;
+}
+
+.page-template-template-antiques .image_frame.scale-with-grid .image_wrapper .image_links.double a:first-child {
+    display: none;
+}
+
+/* Mohan 17-11-2015 */
+.status-main-parent {
+    /*display: inline-block;
+    width: 60%;
+    margin-left: 35px;
+    float: right;*/
+    float: none;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.view-item-text {
+    font-size: 18px;
+    line-height: 10px;
+}
+
+.addtoany_share_save_container.addtoany_content_bottom {
+    display: none;
+}
+
+.single-antiques .addtoany_share_save_container.addtoany_content_bottom {
+    display: block;
+}
+
+/* Mohan 17/11/15 Aligning and removing the destortion */
+.page-template-template-antiques .image_wrapper,
+.image_wrapper {
+    /*  display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 100%;
+      text-align:-moz-center;
+      text-align:-webkit-center; */
+}
+
+/* category page css end */
+
+/*** Mohan ***/
+
+/* Separator Footer top */
+.section-border-bottom:after,
+.section-border-bottom:before,
+.footer_copy:before,
+.section.section-post-related:before,
+.last-section-border:before,
+.border-bsf:before {
+    background: url("/wp-content/uploads/2015/01/home_jeweller_line_silver.png") repeat-x scroll 0 0 rgba(0, 0, 0, 0) !important;
+    content: "";
+    display: block;
+    height: 3px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 21;
+}
+
+.trailer_box .desc .subtitle {
+    text-transform: lowercase;
+}
+
+/* search page css
+.search-results .image_frame .image_wrapper,
+.search-results .wp-caption img,
+.search-results .icon_box .icon_wrapper:before {
+    border-color: #e2e2e2;
+    min-height: 270px;
+    max-height: 270px;
+    height: 270px;
+} */
+
+/* .search-results p.antique_archive_title.column.one-second {
+    font-size: 18px;
+    width: auto!important;
+    clear: none;
+    margin: 10px 7px;
+}
+.search-results p.antique_archive_title.column.one-second {
+    font-size: 18px;
+    width: auto!important;
+    clear: none;
+    margin: 10px 7px;
+}*/
+/* search page css end */
+
+/* single post css*/
+.single-antiques #Content .antique_masonry .image_frame .image_wrapper,
+.page-id-26 #Content .image_frame .image_wrapper {
+    border-color: #e2e2e2;
+    min-height: 0 !important;
+    max-height: none !important;
+    height: auto !important;
+}
+
+/*single post css end */
+/* meadia query section */
+@media (max-width: 1024px) {
+    /* menu css */
+    .ubermenu-submenu-id-2246 {
+        background-image: none !important;
+    }
+
+    /* menu css end  */
+    /* category page css */
+    .icon_box.icon_position_left {
+        min-height: 0px;
+    }
+
+    .status-main-parent {
+        float: left;
+    }
+
+    .view-item-section {
+        display: block;
+        float: none;
+        clear: both;
+    }
+
+    .page-template-template-antiques p.antique_archive_title.column.one-second.status-title-section.sale-status,
+    .page-template-template-antiques p.antique_archive_title.column.one-second.status-title-section,
+    .page-template-template-antiques p.antique_archive_title.column.one-second.status-price-section,
+    p.antique_archive_title.column.one-second.status-title-section.sale-status,
+    p.antique_archive_title.column.one-second.status-title-section,
+    p.antique_archive_title.column.one-second.status-price-section {
+        margin-left: 0px !important;
+        margin-top: 0px !important;
+    }
+
+    p.antique_archive_title.column.one-second.status-title-section.sale-status {
+        margin-right: 15px;
+    }
+
+    p.antique_archive_title.column.one-second.status-price-section {
+        line-height: 24px;
+    }
+
+    /* category page css end */
+}
+
+@media (max-width: 1236px) {
+    /* category page css */
+    .page-template-template-antiques .image_frame a,
+    .archive .image_frame a,
+    .related-posts .image_frame a,
+    .page-id-14582 .image_frame a,
+    .page-template-template-collections .image_frame a {
+        width: auto;
+        height: 270px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    #Top_bar a.responsive-menu-toggle i,
+    #Top_bar a.responsive-menu-toggle {
+        display: none;
+    }
+
+    #Top_bar .menu_wrapper {
+        margin-bottom: 30px;
+    }
+
+    .footer-callto-action-iconbox {
+        margin-bottom: 0 !important;
+        margin-top: 18px !important;
+    }
+
+    .footer-callto-action-iconbox .icon_box.icon_position_left .desc_wrapper {
+        padding-top: 0px;
+    }
+
+    /*.related-posts .image_frame a
+    {
+        width: auto !important;
+        height: auto !important;
+    }*/
+    /*
+    .doller-sign-img .icon_box.icon_position_left .image_wrapper {
+        transform: translateY(-65%)!important;
+          top: 50%;
+    }*/
+    .related-posts .image_frame a {
+        width: auto;
+        height: auto;
+    }
+}
+
+
+@media (max-width: 768px) {
+    /* menu css */
+    .ubermenu-submenu-id-2246 {
+        background-image: block !important;
+    }
+
+    /* menu css end  */
+    /*img gap css*/
+    .column.antique_masonry {
+        margin-bottom: 8px;
+    }
+
+    /*img gap css end */
+    /* buy now alignment*/
+    input[type="image"] {
+        margin-left: -21px;
+    }
+
+    #social_media-3 .social_media .social_icon img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* buy now alignment end*/
+    /* slider text and image*/
+    div#slide-38-layer-7 {
+        font-size: 21px !important;
+    }
+
+    /*div#slide-20-layer-8 {
+        margin-left: 91px!important;
+    }*/
+    div#slide-18-layer-8 {
+        margin-top: 50px !important;
+    }
+
+    div#slide-18-layer-7 {
+        margin-top: 20px !important;
+    }
+
+    /*div#slide-20-layer-8{
+    margin-top: 10px!important;
+    }*/
+    div#slide-19-layer-8 {
+        margin-top: 10px !important;
+    }
+
+    /* slider text and image end*/
+    /* contact form input text*/
+    input#input_2_1 {
+        font-size: 15px;
+    }
+
+    /* contact form input text end*/
+    footer-callto-action-iconbox h4 {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 0px;
+    }
+
+    /*.footer-callto-action-iconbox .icon_box .icon_wrapper,
+    .footer-callto-action-iconbox.footer-cart-section .icon_box .icon_wrapper
+     {
+        line-height: 62px;
+        font-size: 35px;
+    }*/
+    /* call to action */
+    .footer-callto-action-iconbox .icon_box.icon_position_left .image_wrapper {
+        width: auto !important;
+        height: auto !important;
+    }
+
+    /* call to action end */
+    .footer-callto-action-iconbox .icon_box.icon_position_left {
+        padding-left: 50px;
+    }
+
+    .footer-callto-action-iconbox .icon_box.icon_position_left {
+        min-height: 20px;
+    }
+
+    .footer-callto-action-iconbox {
+        margin-top: 20px !important;
+    }
+
+    .footer-callto-action-iconbox .icon_box.icon_position_left .image_wrapper {
+        top: 10px;
+    }
+
+    /*
+    .doller-sign-img .icon_box.icon_position_left .image_wrapper {
+        transform: translateY(-75%)!important;
+        width: 45px;
+        height: 45px;
+        position: absolute;
+
+    }*/
+    .footer-callto-action-iconbox .icon_box .icon_wrapper {
+        line-height: 55px;
+        font-size: 28px;
+    }
+
+    .footer-callto-action-iconbox h4 {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .view-item-text {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    /* Related post css */
+    .related-posts .slick-next {
+        right: -28px;
+    }
+
+    .related-posts .slick-prev {
+        left: -25px;
+    }
+
+    .related-posts .image_frame .image_wrapper {
+        border-color: #e2e2e2 !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        height: auto !important;
+    }
+
+    .related-posts {
+        margin-bottom: 30px;
+        margin-top: 42px;
+    }
+
+    .related-posts .image_frame a {
+        width: 270px;
+        height: 270px;
+        margin: 0 auto;
+    }
+
+    /* Related Post css End */
+    /* our company page css */
+    .our-company-second-section {
+        padding-top: 0px !important;
+    }
+
+    /* our company page css end */
+    /* paypal button css */
+    form.paypal-button-section {
+        margin-top: 10px;
+    }
+
+    /* paypal button css end */
+}
+
+@media (max-width: 767px) {
+
+
+    /* category apge thumbnail image css */
+    .page-template-template-antiques .image_frame a,
+    .archive .image_frame a,
+    .related-posts .image_frame a,
+    .page-id-14582 .image_frame a,
+    .page-template-template-collections .image_frame a {
+        width: 270px;
+        height: 270px;
+        margin: 0 auto;
+    }
+
+    /* category apge thumbnail image css end */
+    /* buy now alignment*/
+    input[type="image"] {
+        margin-left: 21px;
+    }
+
+    /* buy now alignment end*/
+    /* home page css */
+    .text-align-center .wpb_single_image.vc_align_left,
+    .text-align-center .vc_btn3-container.vc_btn3-left,
+    .text-align-center .uvc-main-heading.ult-responsive,
+    .text-align-center .uvc-sub-heading.ult-responsive {
+        text-align: center;
+    }
+
+    /* home page css end  */
+    /* menu css */
+    .ubermenu-submenu-id-2246 {
+        background-image: none !important;
+    }
+
+    /* menu css end  */
+    .home-page-details-section .wpb_single_image.vc_align_center {
+        text-align: left;
+    }
+
+    /*
+    .doller-sign-img .icon_box.icon_position_left .image_wrapper {
+        transform: translateY(-60%)!important;
+        width: 40px;
+        height: 40px;
+    }*/
+    .section_wrapper {
+        max-width: 98% !important;
+        margin: 0 2% 20px;
+    }
+
+    .mobile-spacer {
+        padding-top: 30px;
+    }
+
+    .mobile-spacer-minimal {
+        padding-top: 15px;
+    }
+
+    .mobile-responsive-spacing .vc_single_image-wrapper {
+        margin-top: 45px;
+    }
+
+    .mobile-responsive-spacer .vc_single_image-wrapper {
+        margin-top: 15px;
+    }
+
+    .mobile-section-row .vc_column-inner {
+        padding-top: 0px !important;
+    }
+
+    .mobile-responsive-last-col-spacing {
+        margin-top: 10px;
+    }
+
+    .mobile-col-pad {
+        padding-top: 50px;
+    }
+
+    .last-mobile-spacer {
+        margin-bottom: 0px;
+    }
+
+    .footer-callto-action-iconbox .icon_box.icon_position_left {
+        max-width: 98% !important;
+        margin: 0 2% 0px;
+    }
+
+    .social_media-3 .social_media .social_icon img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .page-id-26 .section.mcb-section {
+        padding-top: 0 !important;
+    }
+
+    .page-id-26 .section_wrapper.mcb-section-inner {
+        margin: 0 2% 10px;
+    }
+
+    .footer-callto-action-iconbox {
+        margin: 0 0 0px !important;
+    }
+
+    #Footer .footer_action .container {
+        max-width: 100% !important;
+    }
+
+    .wrap.mcb-wrap.one.clearfix {
+        padding-top: 29px !important;
+    }
+
+    .footer-contact-details br {
+        display: none;
+    }
+
+    /*.footer-callto-action-iconbox {
+        margin: 0 0 20px !important;
+    }*/
+    .widgets_wrapper .container {
+        max-width: 98% !important;
+        margin: 0 2% 20px;
+    }
+
+    /* category page css */
+    .portfolio_group .portfolio-item {
+        width: 48% !important;
+        float: left;
+    }
+
+    .footer-callto-action-iconbox .icon_box.icon_position_left .desc_wrapper {
+        padding-top: 5px;
+    }
+
+    .footer-callto-action-iconbox h4 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    /***Term page css ***/
+    .aio-icon-component.term-page-box.style_1 {
+        margin-top: 30px;
+    }
+
+    /***end ***/
+    /*.home div#slide-18-layer-7 {
+        font-size: 15px!important;
+        line-height: 17px!important;
+        font-weight: 600!important;
+        margin: 1px 20px 0!important;
+     }
+    .home div#slide-18-layer-8 {
+         margin:17px 0 !important;
+        }*/
+    /* related post css */
+    .related-posts .slick-next {
+        right: -12px;
+        z-index: 9;
+    }
+
+    .related-posts .slick-prev {
+        left: -5px;
+        z-index: 9;
+    }
+
+    /* header logo css */
+    #Top_bar .logo #logo {
+        margin: 15px auto;
+    }
+
+    /* header logo css end  */
+    /* our company page css */
+    .our-company-hide-section {
+        display: none;
+    }
+
+    /* our company page css end */
+    /* related post css
+    .related-posts .portfolio-item.isotope-item {
+        width: auto !important;
+    } */
+    /* related post css end  */
+}
+
+@media (max-width: 480px) {
+    /* about us page css */
+    .about-remove-pad {
+        padding: 0px 8% !important;
+    }
+
+    /* about us page css end */
+    /* related post css */
+    .related-posts .slick-next {
+        right: -35px;
+    }
+
+    .related-posts .slick-prev {
+        left: -35px;
+    }
+
+    .section-post-related .section_wrapper.clearfix {
+        margin-bottom: 0px !important;
+    }
+
+    h2.related-posts-title {
+        margin-bottom: 25px;
+    }
+
+    /* related post css end */
+    /*slider css*/
+    div#slide-18-layer-8 {
+        padding: 0px 10px !important;
+        line-height: 30px !important;
+        font-size: 10px !important;
+        bottom: 20px !important;
+
+    }
+
+    div#slide-18-layer-7 {
+        display: none;
+    }
+
+    div#slide-37-layer-8 {
+        margin-top: 50px !important;
+        padding: 0px 10px !important;
+        line-height: 30px !important;
+        font-size: 10px !important;
+        bottom: 10px !important;
+    }
+
+    /*div#slide-38-layer-8 {
+        padding: 0px 10px!important;
+        line-height: 30px!important;
+        font-size:10px !important;
+    }*/
+    div#slide-38-layer-7 {
+        font-size: 10px !important;
+    }
+
+    /*div#slide-20-layer-8 {
+      margin-top:10px !important;
+      padding:0px 10px !important;
+      line-height: 30px!important;
+      font-size:10px !important;
+      right: 10px!important;
+    }*/
+    div#slide-19-layer-8 {
+        margin-top: 10px !important;
+        padding: 0px 10px !important;
+        line-height: 30px !important;
+        font-size: 10px !important;
+    }
+
+    /*slider css end*/
+    .portfolio_group .portfolio-item {
+        width: 98% !important;
+        float: none;
+    }
+
+    .view-item-section {
+        display: block;
+        clear: none;
+        float: none;
+    }
+
+    .view-item-text {
+        line-height: 5px;
+    }
+
+    .status-main-parent {
+        float: none;
+    }
+
+    .related-posts {
+        margin-bottom: 30px;
+        margin-top: 50px !important;
+        max-width: 270px;
+        margin: auto;
+    }
+
+    .page-template-template-antiques p.antique_archive_title.column.one-second,
+    .related-posts p.antique_archive_title.column.one-second,
+    p.antique_archive_title.column.one-second {
+        margin: 0px 7px 0px !important;
+    }
+
+    .section-border-bottom .section_wrapper {
+        max-width: 100% !important;
+    }
+
+    /* .footer-callto-action-iconbox:last-child {
+        margin: 0 0 -20px !important;
+    }
+    */
+    /*.home div#slide-18-layer-8 {
+        font-size: 15px !important;
+        line-height: 37px!important;
+        padding: 0px 15px!important;
+        margin-top: 50px !important;
+        margin-left: 30px !important;
+     }
+    .home div#slide-20-layer-8 {
+        margin-top: 20px!important;
+        padding: 0px 15px!important;
+        font-size: 15px !important;
+        line-height: 37px!important;
+        margin-left:35px!important;
+    }
+    .home div#slide-19-layer-8 {
+        margin-top: 20px!important;
+        padding: 0px 15px!important;
+        font-size: 15px !important;
+        line-height: 37px!important;
+    }
+    .home div#slide-18-layer-7 {
+        font-size: 10px!important;
+        line-height: 12px!important;
+        font-weight: 600!important;
+        margin: 5px 40px 0!important;
+     }*/
+    /* category page thumbnail image css */
+    .page-template-template-antiques .image_frame a,
+    .archive .image_frame a,
+    .related-posts .image_frame a,
+    .page-id-14582 .image_frame a,
+    .page-template-template-collections .image_frame a {
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    /*.page-template-template-antiques .image_frame,
+    .archive .image_frame,
+    .related-posts .image_frame,
+    .page-id-14582 .image_frame  {
+        overflow: visible;
+    }*/
+    #Content .portfolio_wrapper .portfolio-item-fw-bg .image_wrapper img.scale-with-grid {
+        width: 100%;
+        height: auto;
+        position: relative !important;
+        left: 0;
+        top: 0;
+        transform: none;
+        -webkit-transform: none;
+    }
+
+    /* category page thumbnail image  css */
+}
+
+/***home page media query***/
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .home .column.mcb-column.one-fourth.column_trailer_box .trailer_box .scale-with-grid {
+        min-height: 213px !important;
+        height: 213px !important;
+    }
+
+    /* .portfolio_group .portfolio-item .desc {
+        padding-top:0px;
+    }*/
+    /* .home div#slide-18-layer-7 {
+       font-size: 23px!important;
+       line-height: 25px!important;
+       font-weight: 600!important;
+       margin-left: 107px !important;
+       margin-top: 40px !important;
+    }*/
+    .footer-callto-action-iconbox .icon_box.icon_position_left .image_wrapper {
+        position: absolute !important;
+        /*  left: 12px;*/
+    }
+
+    /*  .footer-callto-action-iconbox:last-child {
+        margin: 20px 0  !important;
+    }*/
+    /*div#slide-20-layer-8 {
+        margin-left: -67px!important;
+    }*/
+    /* .home div#slide-18-layer-8 {
+        margin-top:70px!important;
+      }
+     */
+    .related-posts .portfolio-item-fw-wrapper {
+        width: calc(100% - 1em);
+    }
+
+    .related-posts img.scale-with-grid {
+        min-width: 0;
+    }
+}
+
+@media (min-width: 1025px) {
+    .guaranted-authority .icon_box.icon_position_left.no_border {
+        margin-left: 25px;
+    }
+}
+
+/***end css***/
+
+@media only screen and (max-width: 959px) and (min-width: 769px) {
+    .section-border-bottom .section_wrapper {
+        max-width: 850px;
+    }
+
+    .footer-callto-action-iconbox .icon_box.icon_position_left {
+        padding-left: 60px;
+    }
+
+    .footer-callto-action-iconbox h4 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media only screen and (max-width: 1239px) {
+    #Top_bar a.responsive-menu-toggle {
+        display: none;
+    }
+}
+
+/* Category descripion hide on mobile */
+@media (max-width: 480px) {
+    .section.the_content.category-description {
+        display: none;
+    }
+}
+
+/*Uber menu - this css code copied here because it is not visible except admin-appearence panel */
+/* main */
+.ubermenu.ubermenu-main {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.ubermenu.ubermenu-main .ubermenu-item-level-0 > .ubermenu-target {
+    border: none;
+    box-shadow: none;
+}
+
+.ubermenu.ubermenu-main.ubermenu-horizontal .ubermenu-submenu-drop.ubermenu-submenu-align-left_edge_bar, .ubermenu.ubermenu-main.ubermenu-horizontal .ubermenu-submenu-drop.ubermenu-submenu-align-full_width {
+    left: 0;
+}
+
+.ubermenu.ubermenu-main.ubermenu-horizontal .ubermenu-item-level-0.ubermenu-active > .ubermenu-submenu-drop, .ubermenu.ubermenu-main.ubermenu-horizontal:not(.ubermenu-transition-shift) .ubermenu-item-level-0 > .ubermenu-submenu-drop {
+    margin-top: 0;
+}
+
+.ubermenu-main .ubermenu-submenu.ubermenu-submenu-drop {
+    background-color: #000000;
+    border: 1px solid #d49b50;
+}
+
+.ubermenu-main .ubermenu-item-normal > .ubermenu-target {
+    color: #d49b50;
+}
+
+.ubermenu.ubermenu-main .ubermenu-item-normal > .ubermenu-target:hover, .ubermenu.ubermenu-main .ubermenu-item-normal:hover > .ubermenu-target, .ubermenu.ubermenu-main .ubermenu-item-normal.ubermenu-active > .ubermenu-target {
+    color: #ffffff;
+}
+
+.ubermenu-main .ubermenu-item-normal.ubermenu-current-menu-item > .ubermenu-target {
+    color: #d49b50;
+}
+
+.ubermenu-main, .ubermenu-main .ubermenu-target, .ubermenu-main .ubermenu-nav .ubermenu-item-level-0 .ubermenu-target, .ubermenu-main div, .ubermenu-main p, .ubermenu-main input {
+    font-family: 'Droid Serif', serif;
+    font-weight: 400;
+}
+
+.ubermenu-main, .ubermenu-main .ubermenu-target, .ubermenu-main .ubermenu-nav .ubermenu-item-level-0 .ubermenu-target {
+    font: bold 13px/22px Droid Serif, serif;;
+}
