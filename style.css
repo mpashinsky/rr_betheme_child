@@ -801,37 +801,37 @@ h2.related-posts-title {
     margin-bottom: 0px;
 }
 
-/*.slick-next, .slick-prev {*/
-/*    position: absolute;*/
-/*    display: block;*/
-/*    height: 1em;*/
-/*    padding-bottom: 10px !important;*/
-/*    padding-left: 5px !important;*/
-/*    width: 1em;*/
-/*    line-height: 0;*/
-/*    font-size: 28px;*/
-/*    cursor: pointer;*/
-/*    background: 0 0;*/
-/*    !*color: transparent;*!*/
-/*    margin-top: -10px;*/
-/*    border: none;*/
-/*    outline: 0;*/
-/*    top: 50%;*/
-/*    -webkit-transform: translateY(-50%);*/
-/*    transform: translateY(-50%);*/
-/*}*/
+.slick-next, .slick-prev {
+    position: absolute;
+    display: block;
+    height: 1em;
+    padding-bottom: 10px !important;
+    padding-left: 5px !important;
+    width: 1em;
+    line-height: 0;
+    font-size: 28px;
+    cursor: pointer;
+    background: 0 0;
+    color: transparent;
+    margin-top: -10px;
+    border: none;
+    outline: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
 
 .related-posts button {
     padding: 2px 20px;
 }
 
-/*.related-posts .slick-next {*/
-/*    right: -35px;*/
-/*}*/
+.related-posts .slick-next {
+    right: -35px;
+}
 
-/*.related-posts .slick-prev {*/
-/*    left: -35px;*/
-/*}*/
+.related-posts .slick-prev {
+    left: -35px;
+}
 
 /*.single-antiques .related-posts .image_frame .image_wrapper {
     min-height: 0 !important;
@@ -2122,24 +2122,4 @@ p.antique_archive_title.column.one-second.status-title-section {
 
 .ubermenu-main, .ubermenu-main .ubermenu-target, .ubermenu-main .ubermenu-nav .ubermenu-item-level-0 .ubermenu-target {
     font: bold 13px/22px Droid Serif, serif;;
-}
-
-
-/* Responsive related posts containers */
-.slick-desktop-container,
-.slick-tablet-container,
-.slick-mobile-container {
-  display: none;
-}
-
-@media (min-width: 1025px) {
-  .slick-desktop-container { display: block; }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .slick-tablet-container { display: block; }
-}
-
-@media (max-width: 767px) {
-  .slick-mobile-container { display: block; }
 }
