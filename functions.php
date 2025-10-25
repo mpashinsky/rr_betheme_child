@@ -863,7 +863,9 @@ if ( ! function_exists( 'responsive_related_posts' ) ) :
                       }
                     });
                     </script>';
-                       
+            error_log('Slick init script added for class: ' . $class_to_apply);
+
+
             ?>
         </div> <!-- .related-posts -->
         <?php
