@@ -839,54 +839,30 @@ if ( ! function_exists( 'responsive_related_posts' ) ) :
 				//$output .= $output;
                 //$output .= '</ul>';
 				$output .= '</div>';
-				$output .= '<script>
-						jQuery(document).ready(function($){
-  							$(".' . $class_to_apply . '").slick({
-    							slidesToShow : ' . $slides_to_show . ',
-                                arrows: true,
-								prevArrow : \'<button type="button" class="slick-prev">&lt;</button>\',
-								nextArrow : \'<button type="button" class="slick-next">&gt;</button>\',
-								responsive: [
-								    {
-								        breakpoint: 1024,
-								        settings: {
-								        slidesToShow: 3,
-								        slidesToScroll: 1
-								      }
-								    },
-                                    {
-                                      breakpoint:769,
-                                      settings: {
-                                        slidesToShow: 2,
-                                        slidesToScroll: 1
-                                      }
-                                    },
-                                    {
-                                      breakpoint:767,
-                                      settings: {
-                                        slidesToShow: 1,
-                                        slidesToScroll: 1
-                                      }
-                                    },
-								    {
-								      breakpoint: 600,
-								      settings: {
-								        slidesToShow: 1,
-								        slidesToScroll: 1
-								      }
-								    },
-								    {
-								      breakpoint: 480,
-								      settings: {
-								        slidesToShow: 1,
-								        slidesToScroll: 1
-								      }
-								    }
-								  ]
-  							});
-						});
-					</script>';
-			echo $output;
+                $output .= '<script>
+                    jQuery(document).ready(function($) {
+                      const $slider = $(".' . $class_to_apply . '");
+                      if ($slider.length) {
+                        $slider.on("init", function(event, slick) {
+                          $(this).css("opacity", "1");
+                        }).slick({
+                          slidesToShow: ' . $slides_to_show . ',
+                          arrows: true,
+                          prevArrow: \'<button type="button" class="slick-prev">&lt;</button>\',
+                          nextArrow: \'<button type="button" class="slick-next">&gt;</button>\',
+                          responsive: [
+                            { breakpoint: 1024, settings: { slidesToShow: 3 } },
+                            { breakpoint: 769, settings: { slidesToShow: 2 } },
+                            { breakpoint: 600, settings: { slidesToShow: 1 } }
+                          ]
+                        });
+                    
+                        $(window).on("load resize", function() {
+                          $slider.slick("setPosition");
+                        });
+                      }
+                    });
+                    </script>';
                        
             ?>
         </div> <!-- .related-posts -->
