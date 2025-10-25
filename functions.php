@@ -710,13 +710,16 @@ if ( ! function_exists( 'responsive_related_posts' ) ) :
 					$item_class = array();
 					$categories = '';
 					$special_class = '';
+					$antique_status = '';
+					$antique_price = '';
+					$item_bg = '';
 					
 					$custom_fields = get_post_meta($r->ID);
 					if (array_key_exists('status', $custom_fields)) {
 						$antique_status = $custom_fields['status'][0];
 						if ( $antique_status === 'Sold' ) 
 						    continue;
-					}   
+					}	  
 					if (array_key_exists('price', $custom_fields)) {
 						$antique_price = $custom_fields['price'][0];
 					}
@@ -729,7 +732,7 @@ if ( ! function_exists( 'responsive_related_posts' ) ) :
 						$categories = substr( $categories , 0, -2 );
 					}
 					$item_class[] = get_post_meta( $r->ID, 'mfn-post-size', true );
-					$item_class[] = has_post_thumbnail() ? 'has-thumbnail' : 'no-thumbnail';
+					$item_class[] = has_post_thumbnail($r->ID) ? 'has-thumbnail' : 'no-thumbnail';
 					$item_class = implode(' ', $item_class);
 					
 					// full width sections for list style
@@ -841,8 +844,10 @@ if ( ! function_exists( 'responsive_related_posts' ) ) :
 				$output .= '</div>';
 				$output .= '<script>
 						jQuery(document).ready(function($){
-                            setTimeout(function() {
-  							$(".' . $class_to_apply . '").slick({
+							setTimeout(function() {
+                                var $slider = $(".' . $class_to_apply . '");
+                                if ($slider.length && !$slider.hasClass("slick-initialized")) {
+									$slider.slick({
     							slidesToShow : ' . $slides_to_show . ',
                                 arrows: true,
 								prevArrow : \'<button type="button" class="slick-prev">&lt;</button>\',

@@ -2123,3 +2123,23 @@ p.antique_archive_title.column.one-second.status-title-section {
 .ubermenu-main, .ubermenu-main .ubermenu-target, .ubermenu-main .ubermenu-nav .ubermenu-item-level-0 .ubermenu-target {
     font: bold 13px/22px Droid Serif, serif;;
 }
+
+
+/* Responsive related posts containers */
+.slick-desktop-container,
+.slick-tablet-container,
+.slick-mobile-container {
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  .slick-desktop-container { display: block; }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .slick-tablet-container { display: block; }
+}
+
+@media (max-width: 767px) {
+  .slick-mobile-container { display: block; }
+}
