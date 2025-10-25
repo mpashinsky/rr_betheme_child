@@ -845,49 +845,7 @@ if ( ! function_exists( 'responsive_related_posts' ) ) :
                 $output .= '<script>
                     jQuery(document).ready(function($){
                             var $slider = $(".' . $class_to_apply . '");
-                            $slider.slick({
-                            slidesToShow : ' . $slides_to_show . ',
-                            arrows: true,
-                            prevArrow : \'<button type="button" class="slick-prev">&lt;</button>\',
-                            nextArrow : \'<button type="button" class="slick-next">&gt;</button>\',
-                            responsive: [
-                                {
-                                    breakpoint: 1024,
-                                    settings: {
-                                    slidesToShow: 3,
-                                    slidesToScroll: 1
-                                  }
-                                },
-                                {
-                                  breakpoint:769,
-                                  settings: {
-                                    slidesToShow: 2,
-                                    slidesToScroll: 1
-                                  }
-                                },
-                                {
-                                  breakpoint:767,
-                                  settings: {
-                                    slidesToShow: 1,
-                                    slidesToScroll: 1
-                                  }
-                                },
-                                {
-                                  breakpoint: 600,
-                                  settings: {
-                                    slidesToShow: 1,
-                                    slidesToScroll: 1
-                                  }
-                                },
-                                {
-                                  breakpoint: 480,
-                                  settings: {
-                                    slidesToShow: 1,
-                                    slidesToScroll: 1
-                                  }
-                                }
-                              ]
-                        });
+                            $slider.slick();
                     });
                 </script>';
             echo $output;
