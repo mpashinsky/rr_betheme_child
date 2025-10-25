@@ -27,6 +27,28 @@ load_child_theme_textdomain('betheme', get_stylesheet_directory() . '/languages'
 load_child_theme_textdomain('mfn-opts', get_stylesheet_directory() . '/languages');
 
 /**
+ * Compatibility shims for Betheme core functions that may be missing
+ * This prevents fatal errors if the parent theme is not fully loaded.
+ */
+if ( ! function_exists( 'mfn_opts_show' ) ) {
+    function mfn_opts_show( $key, $default = null ) {
+        // Retrieve option via mfn_opts_get when available; otherwise use default
+        if ( function_exists( 'mfn_opts_get' ) ) {
+            $value = mfn_opts_get( $key, $default );
+        } else {
+            $value = $default;
+        }
+        // Normalize arrays to scalar
+        if ( is_array( $value ) ) {
+            $value = reset( $value );
+        }
+        if ( $value !== null ) {
+            echo $value;
+        }
+    }
+}
+
+/**
  * Enqueue Styles
  */
 

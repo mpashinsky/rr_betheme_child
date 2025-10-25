@@ -79,7 +79,20 @@ foreach($post_categories as $c){
 			<?php 
 			while ( have_posts() ){
 				the_post();	
-				include(locate_template('includes/content-single-antique.php' ) );
+				// Load the single antique content template safely. Avoid fatal error if path is missing.
+				$template = locate_template('includes/content-single-antique.php', false, false);
+				if ( ! empty( $template ) ) {
+					include $template;
+				} else {
+					// Fallback to root-level template if exists
+					$template_root = locate_template('content-single-antique.php', false, false);
+					if ( ! empty( $template_root ) ) {
+						include $template_root;
+					} else {
+						// Final fallback: output the content to prevent a blank page
+						the_content();
+					}
+				}
 
 			}
 			
