@@ -842,15 +842,13 @@ if ( ! function_exists( 'responsive_related_posts' ) ) :
 				//$output .= $output;
                 //$output .= '</ul>';
 				$output .= '</div>';
-                $output .= '<script>
-                    jQuery(document).ready(function($){
-  							$(".' . $class_to_apply . '").slick({
+            $output .= '<script>
+						jQuery(document).ready(function(){
+  							jQuery(".' . $class_to_apply . '").slick({
     							slidesToShow : ' . $slides_to_show . ',
 								slidesToScroll : 1,
-                                arrows: true,
 								prevArrow : \'<button type="button" class="slick-prev">&lt;</button>\',
 								nextArrow : \'<button type="button" class="slick-next">&gt;</button>\',
-								responsive: [
 								responsive: [
 								    {
 								        breakpoint: 1024,
@@ -888,7 +886,6 @@ if ( ! function_exists( 'responsive_related_posts' ) ) :
 								      }
 								    }
 								  ]
-								]
   							});
 						});
 					</script>';
