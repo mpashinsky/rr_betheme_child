@@ -822,12 +822,11 @@ if ( ! function_exists( 'responsive_related_posts' ) ) :
   							$(".' . $class_to_apply . '").slick({
     							slidesToShow : ' . $slides_to_show . ',
 								slidesToScroll : 1,
-                                dots: true,
                                 arrows: true,
                                 adaptiveHeight: true,
 								prevArrow : \'<button type="button" class="slick-prev">&lt;</button>\',
 								nextArrow : \'<button type="button" class="slick-next">&gt;</button>\',
-								responsive: [
+								/*responsive: [
 								    {
 								        breakpoint: 1024,
 								        settings: {
@@ -863,7 +862,7 @@ if ( ! function_exists( 'responsive_related_posts' ) ) :
 								        slidesToScroll: 1
 								      }
 								    }
-								  ]
+								  ]*/
   							});
 						});
 					</script>';
