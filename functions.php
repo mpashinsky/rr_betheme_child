@@ -819,6 +819,7 @@ if ( ! function_exists( 'responsive_related_posts' ) ) :
 				$output .= '</div>';
 				$output .= '<script>
 						jQuery(document).ready(function($){
+                            $(".' . $class_to_apply . '").slick(\'unslick\');
   							$(".' . $class_to_apply . '").slick({
     							slidesToShow : ' . $slides_to_show . ',
 								slidesToScroll : 1,
