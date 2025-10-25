@@ -818,10 +818,13 @@ if ( ! function_exists( 'responsive_related_posts' ) ) :
                 //$output .= '</ul>';
 				$output .= '</div>';
 				$output .= '<script>
-						jQuery(document).ready(function(){
-  							jQuery(".' . $class_to_apply . '").slick({
+						jQuery(document).ready(function($){
+  							$(".' . $class_to_apply . '").slick({
     							slidesToShow : ' . $slides_to_show . ',
 								slidesToScroll : 1,
+                                dots: true,
+                                arrows: true,
+                                adaptiveHeight: true,
 								prevArrow : \'<button type="button" class="slick-prev">&lt;</button>\',
 								nextArrow : \'<button type="button" class="slick-next">&gt;</button>\',
 								responsive: [
