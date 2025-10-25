@@ -812,7 +812,7 @@ h2.related-posts-title {
     font-size: 28px;
     cursor: pointer;
     background: 0 0;
-    color: transparent;
+    /*color: transparent;*/
     margin-top: -10px;
     border: none;
     outline: 0;
