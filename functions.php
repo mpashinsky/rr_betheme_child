@@ -841,6 +841,7 @@ if ( ! function_exists( 'responsive_related_posts' ) ) :
 				$output .= '</div>';
 				$output .= '<script>
 						jQuery(document).ready(function($){
+                            setTimeout(function() {
   							$(".' . $class_to_apply . '").slick({
     							slidesToShow : ' . $slides_to_show . ',
                                 arrows: true,
@@ -884,6 +885,7 @@ if ( ! function_exists( 'responsive_related_posts' ) ) :
 								    }
 								  ]
   							});
+                            }, 300);
 						});
 					</script>';
 			echo $output;
