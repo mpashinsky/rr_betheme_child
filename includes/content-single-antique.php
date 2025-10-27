@@ -152,7 +152,7 @@ $translate['task'] 			= mfn_opts_get('translate') ? mfn_opts_get('translate-task
 ?>
 <div id="portfolio-item-<?php the_ID(); ?>" <?php post_class( $classes ); ?>>
 	<div class="section section-portfolio-header">
-		<div class="section_wrapper clearfix mcb-wrap-inner gap-20">
+		<div class="section_wrapper clearfix">
 			<?php if( false/*mfn_opts_get('prev-next-nav')*/ ): ?>
 				<div class="column one post-nav">
 					<?php 
