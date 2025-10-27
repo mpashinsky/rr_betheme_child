@@ -833,6 +833,20 @@ h2.related-posts-title {
     left: -35px;
 }
 
+/* Slick slider */
+@media (min-width: 1025px) {
+    .slick-tablet-container, .slick-mobile-container { display: none; }
+}
+
+@media (max-width: 1024px) {
+    .slick-desktop-container, .slick-mobile-container { display: none; }
+}
+
+@media (max-width: 768px) {
+    .slick-desktop-container, .slick-tablet-container { display: none; }
+    .slick-mobile-container { display: block; }
+}
+
 /*.single-antiques .related-posts .image_frame .image_wrapper {
     min-height: 0 !important;
     max-height: none !important;
