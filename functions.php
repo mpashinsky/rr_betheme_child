@@ -844,11 +844,12 @@ if ( ! function_exists( 'responsive_related_posts' ) ) :
 				$output .= '</div>';
             $output .= '<script>
 						jQuery(document).ready(function(){
-  							jQuery(".' . $class_to_apply . '").slick({
-    							slidesToShow : ' . $slides_to_show . ',
+                            var $slider = jQuery(".' . $class_to_apply . '");
+                            var slideCount = $slider.children().length;
+                            var slidesToShow = Math.min(4, slideCount); // 4 — твой базовый slidesToShow
+                            $slider.slick({
+    							slidesToShow : slidesToShow,
 								slidesToScroll : 1,
-								infinite: false,       // отключаем бесконечный скролл
-                                adaptiveHeight: true,   
 								prevArrow : \'<button type="button" class="slick-prev">&lt;</button>\',
 								nextArrow : \'<button type="button" class="slick-next">&gt;</button>\',
 								responsive: [
