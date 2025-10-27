@@ -322,14 +322,15 @@ $translate['task'] 			= mfn_opts_get('translate') ? mfn_opts_get('translate-task
 						<span class="meta-value reserved-status"><?php echo '<p>'. $reference .'</p>'; ?></span>
 						<?php } ?>
 
-					</div>	
-					<a href="mailto:info@romanovrussia.com?subject=Question about item with reference <?php echo $reference ?>">
-					    <input type="submit" class="gform_button button" value="Ask a question">
-				    </a>
-					<br>
-					<a href="/terms">
-					    <input type="submit" class="gform_button button" value="Terms of sale">
-				    </a>
+					</div>
+                    <div class="button-group">
+                        <a href="mailto:info@romanovrussia.com?subject=Question about item with reference <?php echo $reference ?>">
+                            <input type="submit" class="gform_button button" value="Ask a question">
+                        </a>
+                        <a href="/terms">
+                            <input type="submit" class="gform_button button" value="Terms of sale">
+                        </a>
+                    </div>
                     <h4>GET UPDATES ON NEW ITEMS</h4>
                     <?php echo do_shortcode('[gravityform id=2 title=false description=false ajax=true]') ?>
 				</div>
