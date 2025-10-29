@@ -1015,25 +1015,4 @@ if( ! function_exists( 'mfn_post_navigation' ) )
 		return $output;
 	}
 }
-
-function enqueue_antiques_isotope() {
-    // jQuery уже встроен в WordPress, зависимость ['jquery']
-    wp_enqueue_script(
-        'jquery-isotope',
-        get_template_directory_uri() . '/js/jquery.isotope.min.js', // путь к твоему файлу Isotope
-        ['jquery'],
-        '3.0.6',
-        true // подключаем в футере
-    );
-
-    // Скрипт для инициализации
-    wp_enqueue_script(
-        'antiques-init',
-        get_template_directory_uri() . '/js/antiques-init.js', // создадим отдельный JS
-        ['jquery', 'jquery-isotope'],
-        null,
-        true
-    );
-}
-add_action('wp_enqueue_scripts', 'enqueue_antiques_isotope');
 ?>

@@ -187,3 +187,36 @@ if(get_the_ID() == '23') { ?>
 <?php } ?>
 
 <?php get_footer(); ?>
+<!-- Safe Isotope/Masonry Init -->
+<script>
+    (function($){
+        function initPortfolio(){
+            var $container = $('.portfolio_group.isotope');
+
+            if($container.length && typeof $.fn.isotope !== 'undefined'){
+                if(typeof mfn_isotope === 'function') {
+                    mfn_isotope();
+                }
+
+                // Initialize Masonry fallback for non-Isotope containers
+                if(typeof $.fn.masonry !== 'undefined'){
+                    $container.masonry({
+                        itemSelector: '.portfolio_item',
+                        percentPosition: true
+                    });
+                }
+                return true;
+            }
+            return false;
+        }
+
+        $(window).on('load', function(){
+            if(!initPortfolio()){
+                console.warn('Isotope not ready yet, retrying in 500ms...');
+                var interval = setInterval(function(){
+                    if(initPortfolio()) clearInterval(interval);
+                }, 500);
+            }
+        });
+    })(jQuery);
+</script>
