@@ -199,9 +199,9 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
 	                            if($max_page == $current_page) {
 	                                $is_last_page = true;
 	                            }
-							 	echo '<ul class="portfolio_group lm_wrapper isotope '. $portfolio_classes .'">';
+							 	echo '<div class="portfolio_group lm_wrapper isotope '. $portfolio_classes .'">';
 							 		echo romanov_antiques_archive( $portfolio_query );
-								echo '</ul>';
+								echo '</div>';
 				
 								echo mfn_pagination( $portfolio_query, $load_more );
 	

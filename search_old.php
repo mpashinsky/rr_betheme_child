@@ -77,9 +77,9 @@ $translate['categories'] 	= mfn_opts_get('translate') ? mfn_opts_get('translate-
 							<div class="posts_group classic">
 								<?php
 
-								echo '<ul class="portfolio_group lm_wrapper isotope '. $portfolio_classes .'">';
+								echo '<div class="portfolio_group lm_wrapper isotope '. $portfolio_classes .'">';
 							 		echo romanov_antiques_archive( $portfolio_query );
-								echo '</ul>';
+								echo '</div>';
 								
 									/*
 									while ( have_posts() ):

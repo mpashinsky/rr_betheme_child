@@ -303,7 +303,7 @@ if( ! function_exists('romanov_antiques_archive') ){
                 
                 // Echo ---------------------------------------------------------------------------
                 
-                $output .= '<li class="portfolio-item isotope-item '. $item_class .'">';
+                $output .= '<div class="portfolio-item isotope-item '. $item_class .'">';
                 
                 if( $style == 'masonry-hover' ){
                         // style: Masonry Hover ---------------------------------------------------
@@ -420,7 +420,7 @@ if( ! function_exists('romanov_antiques_archive') ){
                     $output .= '</div>';
                     $output .= '</div>';
                 }
-                $output .= '</li>';
+                $output .= '</div>';
                 
             }
         }
