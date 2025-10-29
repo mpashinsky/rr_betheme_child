@@ -174,8 +174,9 @@ function related_article_size() {
 function load_scripts() {
    // wp_enqueue_style( 'style-lightbox', get_stylesheet_uri() );
    wp_enqueue_style( 'lightbox-css', get_stylesheet_directory_uri() . '/js/lightbox.css' );
+   wp_enqueue_script( 'jquery' );
    wp_enqueue_script( 'lightbox-js', get_stylesheet_directory_uri() . '/js/lightbox.js', array(), '1.0.0', true );
-   wp_enqueue_script( 'masonry' );
+   wp_enqueue_script( 'isotope', 'https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js', array('jquery'), '3.0.6', true );
    wp_enqueue_script( 'cusom-js', get_stylesheet_directory_uri() . '/js/custom.js', array(), '1.0.0', true );
    wp_enqueue_style( 'slick-css', get_stylesheet_directory_uri() . '/css/slick.css' );
    wp_enqueue_script( 'slick-min-js', get_stylesheet_directory_uri() . '/js/slick.min.js', array(), '1.0.0', true );
