@@ -805,8 +805,8 @@ h2.related-posts-title {
     position: absolute;
     display: block;
     height: 1em;
-    padding-bottom: 10px !important;
-    padding-left: 5px !important;
+    padding-bottom: 19px !important;
+    padding-left: 12px !important;
     width: 1em;
     line-height: 0;
     font-size: 28px;
@@ -822,7 +822,7 @@ h2.related-posts-title {
 }
 
 .related-posts button {
-    padding: 2px 20px;
+    padding: 15px 24px;
 }
 
 .related-posts .slick-next {
