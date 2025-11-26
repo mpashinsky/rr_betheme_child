@@ -77,7 +77,9 @@
 					
 					// Pages & Blog Page ---
 					$subheader_image = wp_get_attachment_image_src( get_post_thumbnail_id( mfn_ID() ), 'full' );
-					$header_style .= ' style="background-image:url('. $subheader_image[0] .');"';
+					if ( is_array( $subheader_image ) && ! empty( $subheader_image[0] ) ) {
+						$header_style .= ' style="background-image:url('. esc_url( $subheader_image[0] ) .');"';
+					}
 
 				} elseif( get_post_meta( mfn_ID(), 'mfn-post-header-bg', true ) ){
 
