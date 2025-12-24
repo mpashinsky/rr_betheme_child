@@ -298,7 +298,7 @@ if( ! function_exists('romanov_antiques_archive') ){
                     $link_before    = '<a class="link" href="'. $ext_link .'" target="'. $external .'">';
                 } else {
                     // link to project details
-                    $link_before    = '<a class="link" href="'. get_permalink() .'">';
+                    $link_before    = '<a class="link" href="'. get_permalink( get_the_ID() ) .'">';
                 }
                 
                 
@@ -353,7 +353,7 @@ if( ! function_exists('romanov_antiques_archive') ){
                     $output .= '<div class="links_wrapper">';
                     $output .= '<a href="#" class="button button_js portfolio_prev_js"><span class="button_icon"><i class="icon-up-open"></i></span></a>';
                     $output .= '<a href="#" class="button button_js portfolio_next_js"><span class="button_icon"><i class="icon-down-open"></i></span></a>';
-                    $output .= '<a href="'. get_permalink() .'" class="button button_left button_theme button_js"><span class="button_icon"><i class="icon-link"></i></span><span class="button_label">'. $translate['readmore'] .'</span></a>';
+                    $output .= '<a href="'. get_permalink( get_the_ID() ) .'" class="button button_left button_theme button_js"><span class="button_icon"><i class="icon-link"></i></span><span class="button_label">'. $translate['readmore'] .'</span></a>';
                     $output .= '</div>';
                     $output .= '</div>';
                                 // style: All | Photo ---------------------------------------------

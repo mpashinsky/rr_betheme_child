@@ -112,7 +112,7 @@ if( is_array( $terms ) ){
 	}
 }
 
-$permalink =  get_permalink();
+$permalink =  get_permalink( get_the_ID() );
 $permalink =  str_replace("http://romanov.staging.wpengine.com/antique/", "", $permalink);
 $permalink =  str_replace("/", "", $permalink);
 $splittedstring = explode("-",$permalink);
@@ -386,9 +386,9 @@ $translate['task'] 			= mfn_opts_get('translate') ? mfn_opts_get('translate-task
 							echo '</div>';
 							echo '<div class="date_label">'. get_the_date() .'</div>';
 							echo '<div class="desc">';
-							echo '<h4><a href="'. get_permalink() .'">'. get_the_title() .'</a></h4>';
+                            echo '<h4><a href="'. get_permalink( get_the_ID() ) .'">'. get_the_title() .'</a></h4>';
 							echo '<hr class="hr_color" />';
-							echo '<a href="'. get_permalink() .'" class="button button_left button_js"><span class="button_icon"><i class="icon-layout"></i></span><span class="button_label">'. $translate['readmore'] .'</span></a>';
+                            echo '<a href="'. get_permalink( get_the_ID() ) .'" class="button button_left button_js"><span class="button_icon"><i class="icon-layout"></i></span><span class="button_label">'. $translate['readmore'] .'</span></a>';
 							echo '</div>';
 							echo '</div>';
 						}
