@@ -130,10 +130,11 @@
 								
 									global $wp_query;
 									$total_results = $wp_query->found_posts;
-									
+												$search_query = get_search_query( false );
+
 									$translate['search-results'] = mfn_opts_get('translate') ? mfn_opts_get('translate-search-results','results found for:') : __('results found for:','betheme');								
-									echo '<h1 class="title">'. $total_results .' '. $translate['search-results'] .' '. esc_html( $_GET['s'] ) .'</h1>';
-									
+												echo '<h1 class="title">'. $total_results .' '. $translate['search-results'] .' '. esc_html( $search_query ) .'</h1>';
+
 								echo '</div>';
 							echo '</div>';
 						echo '</div>';

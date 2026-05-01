@@ -2,7 +2,15 @@
 get_header(); 
 global $pagename, $wp_query ;
 
-$category_name = $wp_query->query['category_name'];
+$category_name = '';
+if (isset($wp_query->query['category_name'])) {
+	$category_name = $wp_query->query['category_name'];
+} elseif (is_category()) {
+	$queried_category = get_queried_object();
+	if (isset($queried_category->slug)) {
+		$category_name = $queried_category->slug;
+	}
+}
 // Class
 $portfolio_classes 	= '';
 $section_class 		= array();

@@ -88,29 +88,49 @@ function verifyIPN()
 
     // Check if PayPal verifies the IPN data, and if so, return true.
     if (strcmp ($res, "VERIFIED") == 0) {
-    	if( strcmp ($_POST['payment_status'], "Completed") == 0) {
-        	error_log(date('[Y-m-d H:i e] '). "Payment completed. ".$res." ".$_POST['item_name']." ".$_POST['item_number']." ".$_POST['reference_id']." ".$_POST['payment_status']. PHP_EOL, 3, LOG_FILE);
-    	    //Reserve item
-    	    reserveItem($_POST['item_number']);
-            if (isset($_POST['reference_id'])) {
-                reserveItem($_POST['reference_id']);
+        $payment_status = isset($_POST['payment_status']) ? sanitize_text_field(wp_unslash($_POST['payment_status'])) : '';
+        $item_name = isset($_POST['item_name']) ? sanitize_text_field(wp_unslash($_POST['item_name'])) : '';
+        $item_number = isset($_POST['item_number']) ? sanitize_text_field(wp_unslash($_POST['item_number'])) : '';
+        $reference_id = isset($_POST['reference_id']) ? sanitize_text_field(wp_unslash($_POST['reference_id'])) : '';
+
+	    if( $payment_status === "Completed") {
+	        	error_log(date('[Y-m-d H:i e] '). "Payment completed. ".$res." ".$item_name." ".$item_number." ".$reference_id." ".$payment_status. PHP_EOL, 3, LOG_FILE);
+	    	    // Reserve item only when identifiers are present.
+            if ($item_number !== '') {
+	    	        reserveItem($item_number);
             }
-    	}
+            if ($reference_id !== '') {
+                reserveItem($reference_id);
+            }
+	    }
         return true;
     } else {
-    	error_log(date('[Y-m-d H:i e] '). "Verification failed ".$_POST['reference_id']."RES:".$res. PHP_EOL, 3, LOG_FILE);
+	    $reference_id = isset($_POST['reference_id']) ? sanitize_text_field(wp_unslash($_POST['reference_id'])) : '';
+	    error_log(date('[Y-m-d H:i e] '). "Verification failed ".$reference_id." RES:".$res. PHP_EOL, 3, LOG_FILE);
         return false;
     }
 }
 
 function reserveItem($post_id) {
     global $wpdb;
-    if ( $post_id != '' ) {
+
+    if (! is_numeric($post_id)) {
+        return false;
+    }
+
+    $post_id = (int) $post_id;
+    if ( $post_id > 0 ) {
     	error_log(date('[Y-m-d H:i e] '). "Post ID for reservation: $post_id". PHP_EOL, 3, LOG_FILE);
-        $status = $wpdb->get_var("SELECT meta_value FROM wp_postmeta WHERE post_id LIKE $post_id AND meta_key LIKE 'status'");
+        $status = $wpdb->get_var(
+            $wpdb->prepare(
+                "SELECT meta_value FROM {$wpdb->postmeta} WHERE post_id = %d AND meta_key = %s",
+                $post_id,
+                'status'
+            )
+        );
         if ( $status == 'Available' ) {
         	error_log(date('[Y-m-d H:i e] '). "Item $post_id is available and ready for reservation". PHP_EOL, 3, LOG_FILE);
-            $wpdb->update( 'wp_postmeta',
+            $wpdb->update( $wpdb->postmeta,
             	array( 'meta_value' => 'Reserved' ),
             	array( 'post_id' => $post_id, 'meta_key' => 'status' )
             );
